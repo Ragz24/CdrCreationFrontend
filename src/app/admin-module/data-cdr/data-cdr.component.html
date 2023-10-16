@@ -1,0 +1,46 @@
+<body>
+  <br>
+    <h1>DATA CALL DETAIL RECORD</h1>
+    <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
+    <label for="quantity">Select the number of CDRs to generate</label>
+    <div class="input-button-container">
+        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
+        <button type="submit" class="btn btn-login">GENERATE CDR</button>
+      </div>
+    </form>
+
+<div style="margin: 15px;"  *ngIf="dataArray.length > 0">
+    <table class=" table styled-table table-hover table-bordered ">
+        <thead class="table table-dark">
+            <tr>
+              <th>Session Start Time</th>
+              <th>Session End Time</th>
+              <th>Session Direction</th>
+              <th>Session Type</th>
+              <th>Session Duration (Minutes)</th>
+              <th>Session Status</th>
+              <th>Data Usage</th>
+              <th>Caller IP Address</th>
+              <th>Callee IP Address</th>
+            </tr>
+          </thead>
+        <tbody>
+            <tr *ngFor="let dataCDR of dataArray">
+                <td>{{ dataCDR.sessionStartTime}}</td>
+                <td>{{ dataCDR.sessionEndTime}}</td>
+                <td>{{ dataCDR.sessionDirection }}</td>
+                <td>{{ dataCDR.sessionType }}</td>
+                <td>{{ dataCDR.sessionDuration}}</td>
+                <td>{{ dataCDR.sessionStatus }}</td>
+                <td>{{ dataCDR.dataUsage }} MB</td>
+                <td>{{ dataCDR.callerIPAddress }}</td>
+                <td>{{ dataCDR.calleeIPAddress }}</td>
+              </tr>
+
+        </tbody>  
+    </table><br>
+<div class="button-div">
+<button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+</div>
+</div> <br><br><br>
+</body>

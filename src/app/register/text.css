@@ -1,0 +1,353 @@
+
+  .sign-up .rectangle::placeholder {
+    position: absolute;
+    width: 196px;
+    top: 12px;
+    left: 21px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .rectangle-2::placeholder {
+    position: absolute;
+    width: 158px;
+    top: 15px;
+    left: 18px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  
+  
+
+  
+  .sign-up .overlap-group {
+    position: absolute;
+    width: 257px;
+    height: 45px;
+    top: 345px;
+    left: 25px;
+    border-radius: 6.58px;
+  }
+  
+ 
+  
+  .sign-up .text-wrapper {
+    position: absolute;
+    width: 138px;
+    top: 7px;
+    left: 12px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .rectangle {
+    width: 257px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6.58px;
+    border: 0.73px solid;
+    border-color: #000000;
+  }
+  
+  .sign-up .text-wrapper-2 {
+    position: absolute;
+    width: 138px;
+    top: 6px;
+    left: 16px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  
+  .sign-up .text-wrapper-3 {
+    position: absolute;
+    width: 215px;
+    top: 8px;
+    left: 21px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .text-wrapper-4 {
+    position: absolute;
+    width: 158px;
+    top: 8px;
+    left: 18px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .text-wrapper-5 {
+    position: absolute;
+    width: 158px;
+    top: 11px;
+    left: 13px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .rectangle-2 {
+    width: 537px;
+    height: 53px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6.58px;
+    border: 0.73px solid;
+    border-color: #000000;
+  }
+  
+  
+  
+  .sign-up .text-wrapper-6 {
+    position: absolute;
+    width: 232px;
+    top: -20px;
+    left: 0;
+    font-family: "Poppins-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #000000;
+    font-size: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+
+  
+  
+  .sign-up .text-wrapper-7 {
+    position: absolute;
+    width: 185px;
+    top: 8px;
+    left: 11px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .overlap-6 {
+    position: absolute;
+    width: 257px;
+    height: 45px;
+    top: 150px;
+    left: 305px;
+    border-radius: 6.58px;
+  }
+  
+  .sign-up .div-wrapper {
+    position: absolute;
+    width: 257px;
+    height: 45px;
+    top: 150px;
+    left: 25px;
+    border-radius: 6.58px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .sign-up .text-wrapper-8 {
+    position: absolute;
+    width: 196px;
+    top: 9px;
+    left: 21px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .overlap-7 {
+    position: absolute;
+    width: 119px;
+    height: 32px;
+    top: 423px;
+    left: 25px;
+    background-color: #000000;
+    border-radius: 2.93px;
+  }
+  
+  .sign-up .text-wrapper-9 {
+    position: absolute;
+    width: 76px;
+    top: 6px;
+    left: 20px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .overlap-8 {
+    position: absolute;
+    width: 119px;
+    height: 32px;
+    top: 423px;
+    left: 175px;
+    background-color: #ffffff;
+    border-radius: 2.93px;
+    border: 0.73px solid;
+    border-color: #000000;
+  }
+  
+  .sign-up .text-wrapper-10 {
+    position: absolute;
+    width: 82px;
+    top: 6px;
+    left: 20px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .text-wrapper-11 {
+    position: absolute;
+    top: 475px;
+    left: 25px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 19.6px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .sign-up .vector {
+    position: absolute;
+    width: 30px;
+    height: 16px;
+    top: 480px;
+    left: 270px;
+  }
+  
+  .sign-up .registeration {
+    position: absolute;
+    width: 570px;
+    height: 530px;
+    top: 0;
+    left: 638px;
+    object-fit: cover;
+  }
+  
+  .sign-up .rectangle {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .navbar {
+    background-color: black; 
+    color: white;            
+    padding: 10px 0;         
+  }
+  
+  .centered-nav {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 1.3rem;       
+    margin-top: 10px;        
+  }
+  
+   .centered-nav li {
+    display: inline;
+    margin: 0 10px;         
+  }
+  
+   .centered-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;     
+  }
+  
+  .centered-nav a:hover {
+    background-color: white; 
+    color: #3f51b5;         
+  }
+  
+  
+  .sign-up select.rectangle {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #555555;
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: normal;
+    appearance: none;
+    padding-left: 18px; 
+    
+  }
+  
+  
+  .sign-up select.rectangle option:disabled {
+    color: #000000;
+  }
+  
+  
+  .sign-up select.rectangle option:not(:disabled) {
+    color: #000;  /* Or any other color you desire for the actual options */
+  }
+  
+  .sign-up .account-button {
+    border: none;          
+    background: transparent; 
+    padding: 0;           
+    cursor: pointer;      
+    outline: none;        /* Remove outline */
+    display: flex;        
+    align-items: center;  
+    gap: 10px;            
+  }
+  
+  #firstName,
+  #lastName,
+  #phoneNumber,
+  #address,
+  #emailAddress,
+  #password {
+      padding-left: 15px; /* Adjust this value as needed */
+  }

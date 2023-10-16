@@ -1,0 +1,220 @@
+body {
+  overflow-x: hidden;
+  font-family:"Poppins-Light", Helvetica;
+  ;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: black;
+  /* Navbar background color */
+  color: white;
+  /* Text color */
+  padding: 10px 0;
+  /* Add padding as needed */
+}
+
+/* Center the navigation items horizontally */
+.centered-nav {
+  list-style-type: none; /* Remove bullet points from the list */
+  padding: 0;
+  text-align: center;
+  font-size: 1.3rem;
+  /* Adjust font size as needed */
+  margin-top: 10px;
+}
+
+/* Style the logo */
+.logo {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+  margin-left: 20px;; /* Add some spacing to the right of the logo */
+}
+
+/* Style the navigation links */
+.centered-nav li {
+  display: inline; /* Display list items horizontally */
+  margin: 0 15px; /* Add spacing between each item */
+}
+
+.centered-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px; /* Make the text bold */
+}
+
+.centered-nav a:hover {
+  color: #fff; /* Change text color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+/*--------------------------------------------------------------------------------*/
+
+/* Style the second navbar */
+
+/*--------------------------------------------------------------------------------*/
+/* Style the carousel container */
+/* Style the carousel container */
+/* Style the carousel container */
+.carousel-container {
+  width: 100%;
+  height: 60vh; /* Set the height to 100% of the viewport height */
+  margin: 0 auto; /* Center the carousel horizontally on the page */
+  margin-bottom: 20px; /* Add some margin to create space */
+}
+
+/* Style the carousel slides */
+.carousel-item img {
+  width: 100%;
+  height: 60vh; /* Set the height to 100% to expand it */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  margin: 0; /* Remove any margin to extend to the edges */
+  display: block; /* Ensure the image is a block-level element */
+}
+
+/* Style the carousel captions */
+.carousel-caption {
+  color: #fff; /* Text color for the captions */
+  padding: 20px; /* Add padding to the captions */
+  text-align: center; /* Center-align text within the caption */
+  height: 30vh; /* Set the height of the captions to your desired value */
+  margin-bottom: 10vh; /* Decrease the margin to move the captions higher */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Style the heading within the caption */
+.carousel-caption h2 {
+  font-size: 32px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the heading bold */
+  margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+/* Style the paragraphs within the caption */
+.carousel-caption p {
+  font-size: 20px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Set line height for readability */
+}
+
+
+/* Center-align the call actions */
+.call-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  color: black;
+  text-align: center;
+  padding-top: 0vh; /* Adjust the padding-top value to move it down */
+  display: flex;
+  justify-content: center; /* Center-align child elements horizontally */
+
+  transition: bottom 0.3s ease; /* Add a smooth transition effect */
+
+  
+
+}
+
+/* Style the individual action items */
+.call-action {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+/* Style the action item text */
+.call-action-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Style the action item images */
+.call-action-img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  margin-right: 140px;
+  margin-left: 150px;
+}
+
+
+/* Style the card container */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+/* Style the "Update Plan" button */
+.card .btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Adjust the width as needed */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align card contents to the center */
+  justify-content: space-between;
+  width: 18%;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 5px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+/* Style card images */
+.card img.cardimg {
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+}
+
+.custom-btn.clicked {
+  background-color: #28a745;
+  color: #fff;
+}
+
+
+/* Style card titles */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the unordered list within each card */
+.card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style list items within the unordered list */
+.card ul li {
+  margin: 5px 0;
+  text-align: center; /* Align list items to the center */
+}
+
+/* Style the "Update Plan" button */
+.card .custom-btn {
+  background-color: #343a40;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Hover effect for the "Update Plan" button */
+.card .custom-btn:hover {
+  background-color: #212529;
+  transform: scale(1.05);
+}

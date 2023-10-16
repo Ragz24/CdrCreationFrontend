@@ -1,0 +1,45 @@
+<body><br><br>
+  <h2>Search User Details</h2><br>
+  <div class="parent-container">
+    <div class="search-input-container">
+      <input class="rounded-input " name="searchDetails" type="text" [(ngModel)]="searchTerm"  placeholder="Search user number"><br>
+      <button type="submit" class="btn-primary" (click)="onSearchInputChange(searchTerm)">Search</button>     
+    </div>
+  </div>
+
+
+  
+  <div class="container "  *ngIf="userCallDetails && userCallDetails.length>0" > <!-- Second Table --><br><br>
+    <h2>USER CALL DETAILS</h2><br>
+    <table class=" table styled-table table-hover rounded ">
+        <thead class="table table-dark">
+            <tr>
+                <th class="th">Caller SIM</th>
+                <th class="th">Callee SIM</th>
+                <th class="th">Outgoing BTS</th>
+                <th class="th">Incoming BTS</th>
+                <th class="th">Call Duration</th>
+                <th class="th">Plan</th>
+                <th class="th">Time Stamp</th>
+                <th class="th">Call Rate</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <tr *ngFor="let p of userCallDetails">
+                <td>{{p.callerSIM}}</td>
+                <td>{{p.calleeSIM}}</td>
+                <td>{{p.outgoingBTS}}</td>
+                <td>{{p.incomingBTS}}</td>
+                <td>{{p.callDuration}}</td>
+                <td>{{p.planCategory}}</td>
+                <td>p.timeStamp</td>
+                <td>{{p.callRate}}</td>
+            </tr>    
+        </tbody>
+        </table><br><br>
+        <div class="button-div">
+        <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+        </div>
+    </div> <br><br><br>
+  
+  </body>

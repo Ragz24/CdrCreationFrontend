@@ -1,0 +1,55 @@
+<body>
+    <br>
+    <h1>BILLING CALL DETAIL RECORD</h1>
+    <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
+    <label for="quantity">Select the number of CDRs to generate</label>
+    <div class="input-button-container">
+        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
+        <button type="submit" class="btn btn-login">GENERATE CDR</button>
+      </div>
+    </form>
+
+    <div  id="scrollableDiv"  *ngIf="billingArray.length > 0"> 
+        <table  class=" table styled-table table-hover table-bordered ">
+            <thead  class="table table-dark">
+                <tr> 
+                    <th>Subscriber ID</th>
+                    <th>Timestamp</th>
+                    <!-- SINCE IT IS BILLING FOR VOICE HAVE TO MENTION THAT IN TITLE -->
+                    <!-- <th>Service Type</th> -->
+                    <th>Caller Number</th>
+                    <th>Callee Number</th>
+                    <th>Call Duration (Minutes)</th>
+                    <th>Rate</th>
+                    <th>Total Cost</th>
+                    <th>Tax and Surcharges</th>
+                    <th>Billing Period</th>
+                    <th>Payment Method</th>
+                    <th>QoS Metrics</th>
+                    <th>Payment Status</th>
+                </tr>
+             </thead> 
+             <tbody>
+                <tr *ngFor="let billingCdr of billingArray">
+                    <td>{{billingCdr.subscriberID }}</td>
+                    <td>{{ billingCdr.timestamp }}</td>
+                    <!-- <td>{{ billingCdr.serviceType }}</td> -->
+                    <td>{{billingCdr.originatingPhoneNumber }}</td>
+                    <td>{{ billingCdr.terminatingPhoneNumber }}</td>
+                    <td>{{billingCdr.callDuration }}</td>
+                    <td>{{billingCdr.rate }}</td>
+                    <td>{{billingCdr.totalCost }}</td>
+                    <td>{{billingCdr.taxAndSurcharges }}</td>
+                    <td>{{billingCdr.billingPeriod }}</td>
+                    <td>{{billingCdr.paymentMethod }}</td>
+                    <td>{{billingCdr.qualityOfServiceMetrics }}</td>
+                    <td>{{billingCdr.paymentStatus }}</td>
+                </tr>
+             </tbody>
+        </table> <br>
+    </div> 
+    <div class="button-div" *ngIf="billingArray.length > 0">
+        <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+    </div> <br><br><br> 
+
+</body>

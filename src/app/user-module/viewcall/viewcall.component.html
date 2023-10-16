@@ -1,0 +1,52 @@
+<body>
+    <br><br>
+    <h2>Call History</h2>
+    <table class="table styled-table table-hover table-bordered  ">
+        <thead class="table table-dark">
+            <tr>
+                <th>Callee Number</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let call of callHistory">
+                <td>{{ call.calleeNumber }}</td>
+                <td>{{ call.duration }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pricingTable">
+        <h3 class="pricingTable-title">Find a plan that's right for you.</h3><br><br>
+        <ul class="pricingTable-firstTable">
+          <li class="pricingTable-firstTable_table">
+            <h1 class="pricingTable-firstTable_table__header">Premium Plan</h1>
+            <p class="pricingTable-firstTable_table__pricing"><span>Rs.</span><span>7,500</span><span><br><br>6 Months</span></p>
+            <ul class="pricingTable-firstTable_table__options">
+              <li>Call Rate: ₹3.60 per minute</li>
+              <li>Text Message Rate: ₹1.20 per message</li>
+              <li>Data Limit: 10GB</li>
+            </ul>
+          </li><li class="pricingTable-firstTable_table">
+            <h1 class="pricingTable-firstTable_table__header">Unlimited Plan</h1>
+            <p class="pricingTable-firstTable_table__pricing"><span>Rs.</span><span>13,500</span><span><br><br>1 Year</span></p>
+            <ul class="pricingTable-firstTable_table__options">
+              <li>Unlimited Calls</li>
+              <li>Unlimited Text</li>
+              <li>Messages
+                Unlimited Data (with a fair usage policy)
+                </li>
+            </ul>
+          </li><li class="pricingTable-firstTable_table">
+            <h1 class="pricingTable-firstTable_table__header">Standard Plan</h1>
+            <p class="pricingTable-firstTable_table__pricing"><span>Rs.</span><span>4,125</span><span><br><br>3 Months</span></p>
+            <ul class="pricingTable-firstTable_table__options">
+              <li>Call Rate: ₹4.80 per minute</li>
+              <li>Text Message Rate: ₹2.25 per message</li>
+              <li>Data Limit: 5GB
+            </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+</body>

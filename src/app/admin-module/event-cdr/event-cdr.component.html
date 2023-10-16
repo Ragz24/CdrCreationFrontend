@@ -1,0 +1,42 @@
+<body>
+    <br>
+    <h1>EVENT CALL DETAIL RECORD</h1>
+    <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
+    <label for="quantity">Select the number of CDRs to generate</label>
+    <div class="input-button-container">
+        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
+        <button type="submit" class="btn btn-login">GENERATE CDR</button>
+      </div>
+    </form>
+    <div style="margin: 15px;"  *ngIf="eventArray.length > 0"> 
+        <table class=" table styled-table table-hover table-bordered ">
+            <thead class="table table-dark">
+                <tr>
+                    <th>Event Timestamp</th>
+                    <th>IMSI</th>
+                    <th>MSISDN</th>
+                    <th>Event Identifier</th>
+                    <th>Event Source</th>
+                    <th>Event Outcome</th>
+                    <th>Event Duration</th>
+                    <th>User Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let eventCDR of eventArray">
+                    <td>{{eventCDR.eventTimestamp }}</td>
+                    <td>{{eventCDR.imsi }}</td>
+                    <td>{{eventCDR.msisdn }}</td>
+                    <td>{{eventCDR.eventIdentifier }}</td>
+                    <td>{{eventCDR.eventSource }}</td>
+                    <td>{{eventCDR.eventOutcome }}</td>
+                    <td>{{eventCDR.eventDuration }}</td>
+                    <td>{{eventCDR.userInfo }}</td>
+                </tr>
+            </tbody>
+        </table> <br>           
+        <div class="button-div">
+            <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+        </div>
+    </div> <br><br><br>
+</body>

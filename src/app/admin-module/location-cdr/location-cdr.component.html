@@ -1,0 +1,50 @@
+<body>
+    <br>
+    <h1>LOCATION CALL DETAIL RECORD</h1>
+    <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
+    <label for="quantity">Select the number of CDRs to generate</label>
+    <div class="input-button-container">
+        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
+        <button type="submit" class="btn btn-login">GENERATE CDR</button>
+      </div>
+    </form>
+
+    <div id="scrollableDiv" *ngIf="locationArray.length > 0">
+        <table  class=" table styled-table table-hover table-bordered ">
+            <thead  class="table table-dark">
+                <tr> 
+                    <th >IMEI</th>
+                    <th >Update Timestamp</th>
+                    <th>Cell ID</th>
+                    <th >Latitude</th>
+                    <th >Longitude</th>
+                    <th >Location Area Code</th>
+                    <th >Roaming Status</th>
+                    <th >Signal Strength (dBm)</th>
+                    <th >Location Accuracy (meters)</th>
+                    <th >Location Source</th>
+                    <th >Location Method</th>
+                </tr>
+             </thead> 
+             <tbody>
+                <tr *ngFor="let location of locationArray">
+                    <td >{{ location.imei }}</td>
+                    <td >{{ location.updateTimestamp }}</td>
+                    <td>{{ location.cellID }}</td>
+                    <td >{{ location.latitude |number: '1.2-2' }}</td>
+                    <td >{{ location.longitude|number: '1.2-2'  }}</td>
+                    <td >{{ location.locationAreaCode }}</td>
+                    <td >{{ location.roamingStatus }}</td>
+                    <td >{{ location.signalStrength }}</td>
+                    <td >{{ location.locationAccuracy |number: '1.2-3' }}</td>
+                    <td >{{ location.locationSource }}</td>
+                    <td >{{ location.locationMethod }}</td>
+                </tr>
+             </tbody>
+        </table>
+    </div> <br>
+    <div class="button-div" *ngIf="locationArray.length > 0">
+        <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+    </div> <br><br><br> 
+
+</body>

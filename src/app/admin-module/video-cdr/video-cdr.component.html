@@ -1,0 +1,54 @@
+<body>
+    <br>
+    <h1>VIDEO CALL DETAIL RECORD</h1>
+    <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
+    <label for="quantity">Select the number of CDRs to generate</label>
+    <div class="input-button-container">
+        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
+        <button type="submit" class="btn btn-login">GENERATE CDR</button>
+      </div>
+    </form>
+
+    <div  id="scrollableDiv"  *ngIf="videoArray.length > 0"> <!-- Second Table --><br><br>
+        <table  class=" table styled-table table-hover table-bordered ">
+            <thead  class="table table-dark">
+                <tr> 
+                    <th>Call Start Timestamp</th>
+                    <th>Call End Timestamp</th>
+                    <th>Caller Identifier</th>
+                    <th>Callee Identifier</th>
+                    <th>Call Duration (Minutes)</th>
+                    <th>Network Type</th>
+                    <th>Call Quality Metrics</th>
+                    <th>Call Type</th>
+                    <th>Call Status</th>
+                    <th>Device Information</th>
+                    <th>Network Usage</th>
+                    <th>Codec Information</th>
+                    <th>Call Identifier</th>
+                </tr>
+             </thead> 
+             <tbody>
+                <tr *ngFor="let videoCdr of videoArray">
+                        <td>{{ videoCdr.callStartTimestamp }}</td>
+                        <td>{{ videoCdr.callEndTimestamp }}</td>
+                        <td>{{ videoCdr.callerIdentifier }}</td>
+                        <td>{{ videoCdr.calleeIdentifier }}</td>
+                        <td>{{ videoCdr.callDuration }}</td>
+                        <td>{{ videoCdr.networkType }}</td>
+                        <td>{{ videoCdr.callQualityMetrics }}</td>
+                        <td>{{ videoCdr.callType }}</td>
+                        <td>{{ videoCdr.callStatus }}</td>
+                        <td>{{ videoCdr.deviceInformation }}</td>
+                        <td>{{ videoCdr.networkUsage }}</td>
+                        <td>{{ videoCdr.codecInformation }}</td>
+                        <td>{{ videoCdr.callIdentifier }}</td>
+                </tr>        
+             </tbody>
+        </table>
+    </div> <br>
+    <div class="button-div" *ngIf="videoArray.length > 0">
+        <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+    </div>  <br><br><br>
+
+</body>

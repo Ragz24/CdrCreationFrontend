@@ -1,0 +1,182 @@
+.sign-up {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.sign-up .div {
+  background-color: #ffffff;
+  width: 1152px;
+  height: 460px;
+  position: relative;
+}
+
+
+
+
+.sign-up .p {
+  position: absolute;
+  width: 258px;
+  top: 70px;
+  left: 0;
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20.3px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+
+  
+.sign-up .text-wrapper-6 {
+  position: absolute;
+  width: 232px;
+  top: -0px;
+  left: 0;
+  font-family: "Poppins-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 43px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+
+
+.sign-up .vector {
+  position: absolute;
+  width: 30px;
+  height: 16px;
+  top: 480px;
+  left: 270px;
+}
+.registeration {
+  position: absolute;
+  width: 658px;
+  height: 600px;
+  top: 0;
+  left: 550px;
+  object-fit: cover;
+
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; 
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rectangle {
+  width: 257px;
+  height: 45px;
+  padding-left: 15px;
+}
+
+.rectangle-2 {
+  width: 522px;
+  height: 53px;
+  padding-left: 15px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 20px; 
+}
+
+.category-phone {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.name-inputs {
+  display: flex;
+  flex-direction: row; 
+  gap: 10px; 
+}
+
+.email-password {
+  display: flex;
+  flex-direction: row; 
+  gap: 10px;
+  margin-top: 15px; 
+}
+
+
+
+.account-button a:hover {
+  color: darkblue; 
+}
+
+
+.account-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+    color: blue; 
+    text-decoration: underline; 
+    transition: color 0.3s; 
+
+  
+}
+
+.text-wrapper-11 {
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn.btn-sign-up {
+  background-color: black;
+  color: white; 
+  margin-right: 10px;
+}
+
+.btn.btn-go-back {
+  background-color:#FFA500 !important;
+  color: black;
+}
+
+.btn.btn-sign-up:disabled {
+  background-color: black !important; 
+  color: white !important; 
+}
+

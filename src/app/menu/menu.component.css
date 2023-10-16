@@ -1,0 +1,31 @@
+.navbar {
+  background-color: black; 
+  color: white;
+  padding: 10px 0; 
+  
+}
+
+.centered-nav {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 10px; 
+}
+
+.centered-nav li {
+  display: inline;
+  margin: 0 10px; 
+}
+
+.centered-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.centered-nav a:hover {
+  background-color: white; 
+  color: #3f51b5;
+}

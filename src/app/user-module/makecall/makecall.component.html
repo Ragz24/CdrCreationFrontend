@@ -1,0 +1,52 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <span class="title">Phone Keyboard</span>
+    <div class="phone">
+      <div class="phone-container">
+        <div id="callStartedStatus" class="call-status">{{ callStatusMessage }}</div>
+        <div id="callEndStatus" class="call-status"></div>
+        <input type="text" maxlength="10" class="number-input" id="numberInput" [value]="callerNumberValue"
+          placeholder="Phone Number" readonly />
+        <div class="keyboard">
+          <div class="number">
+            <button (click)="appendToCallerInput('1')" [disabled]="showKeyButtons"><i>1</i></button>
+            <button (click)="appendToCallerInput('2')" [disabled]="showKeyButtons"><i>2</i></button>
+            <button (click)="appendToCallerInput('3')" [disabled]="showKeyButtons"><i>3</i></button>
+            <button (click)="appendToCallerInput('4')" [disabled]="showKeyButtons"><i>4</i></button>
+            <button (click)="appendToCallerInput('5')" [disabled]="showKeyButtons"><i>5</i></button>
+            <button (click)="appendToCallerInput('6')" [disabled]="showKeyButtons"><i>6</i></button>
+            <button (click)="appendToCallerInput('7')" [disabled]="showKeyButtons"><i>7</i></button>
+            <button (click)="appendToCallerInput('8')" [disabled]="showKeyButtons"><i>8</i></button>
+            <button (click)="appendToCallerInput('9')" [disabled]="showKeyButtons"><i>9</i></button>
+          </div>
+
+          <div class="number aling-right">
+            <button class="call-button" (click)="callNumber()"><i><img
+                  src="https://cdn-icons-png.flaticon.com/128/10211/10211045.png" alt="" width="30"
+                  height="30" /></i></button>
+            <button [disabled]="showKeyButtons" (click)="appendToCallerInput('0')"><i>0</i></button>
+            <button [disabled]="showBackspaceButton" (click)="clearCallerInput()"><i class="delete"><img
+                  src="https://cdn-icons-png.flaticon.com/128/10856/10856524.png" width="30" height="30"
+                  alt="Left Arrow free icon" title="Left Arrow free icon"></i></button>
+          </div>
+
+          <div class="number aling-center">
+            <button class="call-end-button" (click)="endCall()"><i><img
+                  src="https://cdn-icons-png.flaticon.com/128/3735/3735765.png" alt="" width="30"
+                  height="30" /></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call duration timer -->
+  <div class="call-duration">
+    <span>Call Duration:</span>
+    <span>{{ time }}</span>
+  </div>
+</body>

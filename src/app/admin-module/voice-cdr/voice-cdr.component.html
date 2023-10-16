@@ -1,0 +1,46 @@
+<body>
+    <br>
+    <h1>VOICE CALL DETAIL RECORD</h1>
+    <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
+    <label for="quantity">Select the number of CDRs to generate</label>
+    <div class="input-button-container">
+        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
+        <button type="submit" class="btn btn-login">GENERATE CDR</button>
+      </div>
+    </form>
+    
+    <div  style="margin: 15px;" *ngIf="voiceArray.length > 0">
+        <table class=" table styled-table table-hover table-bordered ">
+            <thead class="table table-dark">
+                <tr>
+                        <th>Call Start Time</th>
+                        <th>Call End Time</th>
+                        <th>Caller Number</th>
+                        <th>Callee Number</th>
+                        <th>Call Duration (Minutes)</th>
+                        <th>Call Type</th>
+                        <th>Call Result</th>
+                        <th>Call ID</th>
+                        <th>Call Direction</th>
+                </tr>
+            
+            </thead>
+            <tbody>
+                <tr *ngFor="let vcdr of voiceArray">
+                    <td>{{ vcdr.callStartTime }}</td>
+                    <td>{{ vcdr.callEndTime }}</td>
+                    <td>{{ vcdr.callerNumber }}</td>
+                    <td>{{ vcdr.recipientNumber }}</td>
+                    <td>{{ vcdr.callDurationMinutes }}</td>
+                    <td>{{ vcdr.callType }}</td>
+                    <td>{{ vcdr.callResult }}</td>
+                    <td>{{ vcdr.callID }}</td>
+                    <td>{{ vcdr.callDirection }}</td>
+                  </tr>
+            </tbody>
+        </table> <br>
+        <div class="button-div">
+        <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+        </div>
+    </div> <br><br><br>
+    </body>

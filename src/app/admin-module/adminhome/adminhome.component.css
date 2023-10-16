@@ -1,0 +1,140 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg?size=626&ext=jpg&ga=GA1.2.1718361306.1695021266&semt=ais');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333; /* Default text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile {
+    width: 230px;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #333; /* Change border color */
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow */
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 35px; /* Larger font size */
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333; /* Text color */
+}
+
+.quote {
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  color: #fff !important;
+  border-radius: 17px;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  margin-top: 50px;
+
+}
+
+.card {
+    /* width: 200px;
+    height: 200px;
+    color: white;
+    background-color: black;     
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;  */
+
+  width: 190px;
+  height: 254px;
+  color: white;
+  background-color: black;     
+  border-radius: 10px;
+  margin: 10px;
+  padding: 2px;
+  transition: transform 0.2s;
+  box-shadow: #111 0 1px 3px 2px;
+  align-items: center;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    transform: scale(1.05);
+}
+
+.card:nth-child(odd) {
+    background-color: #b59264;
+}
+
+.card h4 {
+    padding: 10px;
+    text-align: center;
+    margin-top: 50%;
+    font-weight: bolder;
+}
+
+.click-button {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Display the button in the center */
+    color: white;
+    background: transparent;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: translateX(100%);
+    font-weight: bold;
+
+    opacity: 0; /* Initially make the button invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition effect */
+
+   
+
+}
+
+.card:hover h4 {
+    display: none;
+}
+
+.card:hover .click-button {
+    transform: translate(-50%, -50%); /* Center the button within the card */
+    opacity: 1; /* Make the button visible */
+}
+
+
+
+

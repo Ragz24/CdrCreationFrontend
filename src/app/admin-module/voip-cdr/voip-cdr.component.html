@@ -1,0 +1,60 @@
+<body>
+    <br>
+    <h1>VoIP CALL DETAIL RECORD</h1>
+    <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
+    <label for="quantity">Select the number of CDRs to generate</label>
+    <div class="input-button-container">
+        <input type="number" id="quantity" name="quantity" placeholder="Enter Value" [(ngModel)]="quantity" required>
+        <button type="submit" class="btn btn-login">GENERATE CDR</button>
+      </div>
+    </form>
+<div  id="scrollableDiv"  *ngIf="voipArray.length > 0" >
+<table  class=" table styled-table table-hover table-bordered ">
+    <thead  class="table table-dark">
+        <tr> 
+            <th>Call ID</th>
+            <th>Caller IP</th>
+            <th>Callee IP</th>
+            <th>Start Timestamp</th>
+            <th>End Timestamp</th>
+            <th>Call Duration</th>
+            <th>Packet Loss (%)</th>
+            <th>Jitter (ms)</th>
+            <th>Delay (ms)</th>
+            <th>Call Type</th>
+            <th>Call Direction</th>
+            <th>Codec</th>
+            <th>Call Recording Status</th>
+            <th>Network Type</th>
+            <th>Call Set Up Time (s)</th>
+            <th>Call Termination Reason</th>
+            <th>Call Result</th>
+
+</tr></thead>
+<tbody>
+    <tr *ngFor="let voip of voipArray">
+        <td>{{ voip.callID }}</td>
+        <td>{{ voip.callerIP }}</td>
+        <td>{{ voip.calleeIP }}</td>
+        <td>{{ voip.startTimestamp }}</td>
+        <td>{{ voip.endTimestamp  }}</td>
+        <td>{{ voip.callDuration}}</td>
+        <td>{{ voip.packetLoss | number: '1.2-2' }}</td>
+        <td>{{ voip.jitter | number: '1.0-2' }}</td>
+        <td>{{ voip.delay | number: '1.0-2' }}</td>
+        <td>{{ voip.callType }}</td>
+        <td>{{ voip.callDirection }}</td>
+        <td>{{ voip.codec }}</td>
+        <td>{{ voip.callRecordingStatus }}</td>
+        <td>{{ voip.networkType }}</td>
+        <td>{{ voip.callSetUpTime }}</td>
+        <td>{{ voip.callTerminationReason }}</td>
+        <td>{{ voip.callResult }}</td>
+    </tr>
+</table>
+</div>  
+<br>
+    <div class="button-div" *ngIf="voipArray.length > 0">
+        <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+    </div><br><br><br> 
+    </body>          

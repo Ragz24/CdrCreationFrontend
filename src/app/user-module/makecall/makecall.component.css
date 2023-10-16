@@ -1,0 +1,164 @@
+/* Reset styles and remove focus outline */
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Body styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+/* Input styles */
+input {
+  font-size: 20px;
+  color: black;
+  font-weight: 400;
+}
+
+input.number-input {
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  padding: 0 20px;
+  border-radius: 10px;
+  border: 0;
+  -webkit-box-shadow: 0px 0px 17px -1px rgba(132, 132, 132, 0.15);
+  -moz-box-shadow: 0px 0px 17px -1px rgba(132, 132, 132, 0.15);
+  box-shadow: 0px 0px 17px -1px rgba(132, 132, 132, 0.15);
+}
+
+/* Wrapper styles */
+.wrapper {
+  width: 100%;
+}
+
+/* Phone styles */
+.phone {
+  width: 350px;
+  margin: 40px auto 0 auto;
+  position: relative;
+  border: 2px solid black;
+  border-top: 40px solid black;
+  border-bottom: 40px solid black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  box-shadow: 0px 0px 10px black;
+}
+
+span.title {
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  text-align: center;
+}
+
+.phone-container {
+  width: 100%;
+  margin-top: 30px;
+  /* Add some padding to create space between the content and the border */
+}
+
+/* Keyboard styles */
+.keyboard {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 40px;
+}
+
+.number {
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+}
+
+.number.aling-right {
+  text-align: right;
+  width: 100%;
+}
+
+/* Button styles */
+button {
+  font-size: 24px;
+  color: #e4bf88;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  margin-bottom: 25px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button i {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background: white;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: 250ms;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(132, 132, 132, 0.09);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(132, 132, 132, 0.09);
+  box-shadow: 8px 8px 24px 0px rgba(132, 132, 132, 0.09);
+}
+
+button i.delete {
+  background: transparent;
+  box-shadow: 0 0 0 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  -ms-box-shadow: 0 0 0 0;
+  color: #e4bf88;
+}
+
+button i.delete img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button:hover i {
+  color: black;
+}
+
+button:active i {
+  transform: translateY(1px);
+  -webkit-box-shadow: 5px 5px 24px 0px rgba(132, 132, 132, 0.18);
+  -moz-box-shadow: 5px 5px 16px 0px rgba(132, 132, 132, 0.18);
+  box-shadow: 5px 5px 16px 0px rgba(132, 132, 132, 0.18);
+}
+
+button i.delete:active {
+  box-shadow: 0 0 0 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  -ms-box-shadow: 0 0 0 0;
+  transform: translateY(0px);
+  img {
+    transition: 250ms;
+  }
+}
+
+/* Call status styles */
+.call-status {
+  text-align: center;
+  font-size: 18px;
+  color: green; /* You can choose your desired color */
+  margin-top: 10px; /* Add spacing between the input and the status message */
+}
