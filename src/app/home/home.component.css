@@ -1,86 +1,31 @@
-
 body {
     overflow-x: hidden;
     font-family: sans-serif;
-    height: 100vh;
+    height: 100vh; 
+
+    
+}
+.carousel-item {
+    width: 100%; 
+    height: 100vh; 
 }
 
-.navbar {
-    background-color: black;
-    /* Navbar background color */
-    color: white;
-    /* Text color */
-    padding: 10px 0;
-    /* Add padding as needed */
-}
-.logo{
-    width: 100px;
-   
-
-}
-.centered-nav {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    font-size: 1.3rem;
-    /* Adjust font size as needed */
-    margin-top: 10px;
-    /* Adjust margin to vertically center the navigation */
-}
-
-.centered-nav li {
-    display: inline;
-    margin: 0 10px;
-    /* Adjust spacing between navigation items */
-}
-
-.centered-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    /* Add border radius for a button-like appearance */
-}
-
-.centered-nav a:hover {
-    background-color: white;
-    /* Background color on hover */
-    color: #3f51b5;
-    /* Text color on hover */
-}
-
-/* Center the carousel */
 #carouselExample {
     text-align: center;
     width: 100%;
-    /* Set the width to 50% to occupy the left half */
-    height: 90vh;
-
+    height: 90vh; 
 }
-
-/* Style the carousel images */
 .carousel-inner img {
-    height: 100%;
+    height: 90%;
     width: 100%;
     object-fit: cover;
-   
 }
-.col-md-6:first-child {
-    padding-left: 0;
-}
-.featuredPropBox ul li:hover {
-    transform: scale(1.05);  /* adjust the value as needed */
-    transition: transform 0.3s ease;
-}
-.featuredPropBox ul li:hover {
-    z-index: 1;
-}
-/* Style the carousel control buttons */
+
 .carousel-control-prev,
 .carousel-control-next {
     width: 40px;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 30%;
+    /* //background-color: rgba(0, 0, 0, 0.5); */
     border-radius: 50%;
     object-fit: cover;
 }
@@ -89,61 +34,48 @@ body {
 .carousel-control-next-icon {
     color: white;
 }
-.carousel-caption{
+
+.carousel-caption {
     font-size: larger;
 }
 
-/* Center the control buttons vertically */
-.carousel-control-prev {
-    margin-top: 175px;
-}
-
+.carousel-control-prev,
 .carousel-control-next {
-    margin-top: 175px;
+    margin-top: calc(50vh - 20px); 
 }
 
-/* Add some space between the images and control buttons */
 .carousel-inner {
     margin-bottom: 20px;
 }
 
-/* Style the active carousel item */
 .carousel-item.active {
     display: block;
 }
 
-/* Optionally, you can add a box shadow to the carousel for a subtle effect */
 #carouselExample {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-.carousel-caption1
+
+.col-md-6:first-child
 {
-    text-align: center;
-    margin-bottom: 300px;
-    size: 40px;
-    margin-right: 200px;
+    padding-left: 0 !important;
 }
-.carousel-caption
-{
-    text-align: center;
-    margin-bottom: 100px;
-    size: 40px;
-   
-   
-}
-.carousal-heading1
-{
-    text-align:start;
+.carousal-heading1 {
     margin-bottom: 200px;
-    size: 70px;
-    margin-right: 150px;;
-    font-family: JioType,helvetica,arial,sans-serif;
-font-weight: 1000;
-text-transform: none;
-width: 500px;;
-font-size: 65px;
-letter-spacing: -1.44px;
-line-height: 1;
+    font-size: 65px;
+    margin-right: 0px; 
+    margin-left: -100px; 
+    font-family: JioType, helvetica, arial, sans-serif;
+    font-weight: 1000;
+    text-transform: none;
+    width: 500px;
+    letter-spacing: -1.44px;
+    line-height: 1;
+    color: white; 
+
+   
+    top: 20px; 
+    left: 20px; 
 }
 .carousal-heading{
     text-align: center;
@@ -157,146 +89,281 @@ letter-spacing: -1.44px;
 line-height: 1;
    
 }
-
-
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
-        body {
-                       font-family: 'Open Sans', sans-serif;
+.carousal-heading2{
+    text-align: center;
+    margin-bottom: 100px;
+    size: 40px;
+    font-family: JioType,helvetica,arial,sans-serif;
+font-weight: 900;
+text-transform: none;
+font-size: 2.6rem;
+letter-spacing: -1.44px;
+line-height: 1;
    
-        }
-       
-        a:hover {
-            text-decoration: none;
-        }
-       
-        .np {
-            padding: 0px;
-        }
-       
-       
-        .featuredPropBox ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            list-style: outside none none;
-            padding: 0;
-        }
-       
-        .featuredPropBox ul li {
-           
-            background-size: cover;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            display: block;
-            height: 250px;
-            margin: 5px;
-            margin-top: 50px;
-            width: 30%;
-            position: relative;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-       
-        .featuredPropBox ul li:after {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            background-color: rgba(22, 22, 22, 0.6);
-            transition: all 0.3s;
-        }
-       
-        .featuredPropBox ul li:nth-child(1) {
-            background-image: url('https://media.istockphoto.com/id/1313901506/photo/cropped-shot-of-an-african-american-young-woman-using-smart-phone-at-home-smiling-african.jpg?s=612x612&w=0&k=20&c=geSmPOcfVl3aJ13j4XIDG85LZVbOVPhYsCBJ1I0BVrk=');
-        }
-       
-        .featuredPropBox ul li:nth-child(2) {
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAEhCAMAAABBWYfGAAADAFBMVEUAAACteUrck0GqdUbxqEK2f07AiVbgl0OVZz/EjFayfUyQYzyZakJ2Vjx9Wz8jEQSdbkSfcEfnnD+kckVyUjgeEg/upEG6gk+LXzq+hlIoFQplTDeCYEPjmT/8c19+WDfIkFrZkD35uGf7toHUjkBrUDorGhUQBwSjdEojFxWFXDrqoEBsTTP7bFQdDwRGMiHiVkRmRSsvFgdzWUNBLR4yHRKIY0XyqkW6hVZtSSv8cVp5UzNiSDNROiiGZkz9u4rJhDxWPyxuVD/VVkjvnGV4XkhcRDBzTi8XDgv5rXOQZ0ffUjxKNiZ8Yk7glTvsl2CWbU3imkfwYUv3sHphQSZCJAbzoWnMlWBaPCLbomlMKgbgjVzQiT0XCgT0Z1Llk1/1nlnurFo3HgU0Ixv2bFyneFDutXbpWUFUNR32p2');
-        }
-       
-        .featuredPropBox ul li:nth-child(3) {
-            background-image: url('https://i.ibb.co/QMrtWT1/c.jpg');
-        }
+}
 
- .featuredPropBox ul li:nth-child(4) {
-            background-image: url('https://i.ibb.co/DL5pvY6/bg-1-2.jpg');
-        }
+.content-section, .right-content {
+    font-family: 'JioType', 'helvetica', 'arial', sans-serif;
+    color: #333;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 90vh;
+    font-size: small;
+    padding-right: 0;
+}
 
- .featuredPropBox ul li:nth-child(5) {
-            background-image: url('https://i.ibb.co/FWV1BJG/bg-1.jpg');
-        }
- .featuredPropBox ul li:nth-child(6) {
-            background-image: url('https://i.ibb.co/ZXmWmSZ/14.jpg');
-        }
+.container-fluid {
+    width: 100%;
 
- .featuredPropBox ul li:nth-child(7) {
-            background-image: url('https://i.ibb.co/hLcmWbT/15646.jpg');
-        }
+    display: flex; 
+}
+.carousel {
+    float: left;
+    width: 50%;
+}
+.content-section {
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
 
- .featuredPropBox ul li:nth-child(8) {
-            background-image: url('https://i.ibb.co/89P5rTs/15678.jpg');
-        }
+/* .content-section:hover {
+    transform: scale(0.9);
+} */
 
- .featuredPropBox ul li:nth-child(9) {
-            background-image: url('https://i.ibb.co/RhZgpSG/20845.jpg');
-        }
-       
-        .featuredPropBox ul li .fplogo {
-            left: 50%;
-            position: relative;
-            top: 50%;
-            align-items: center;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 50px;
-            z-index: 1;
-            transition: all 0.3s;
-        }
-        .featuredPropBox ul li #sfplogo img {
-            width: 100%;
-            margin-left: 10px;;
-        }
-        .featuredPropBox ul li #tfplogo img {
-            width: 100%;
-            margin-left: 20px;;
-        }
-        .featuredPropBox ul li .fplogo img {
-            width: 100%;
-        }
-       
-        .featuredPropBox ul li .fptext {
-            display: none;
-            font-size: 16px;
-            left: 50%;
-            position: absolute;
-            text-align: center;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.3s ease 0s;
-            width: 65%;
-            z-index: 1;
-        }
-       
-        .featuredPropBox ul li .fptext p {
-            color: #fff;
-            margin: 0px;
-        }
-       
-        .featuredPropBox ul li:hover {
-            box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2) inset;
-        }
-       
-        .featuredPropBox ul li:hover:after {
-            background-color: rgba(22, 22, 22, 0.3);
-        }
-       
-        .featuredPropBox ul li:hover .fplogo {
-            display: none;
-        }
-       
-        .featuredPropBox ul li:hover .fptext {
-            display: block;
-        }
+
+
+.content-section h2::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: black;
+}
+
+.right-content ul li {
+    font-family: 'JioType', 'helvetica', 'arial', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-align: left;
+    margin: 15px 0; 
+}
+
+.right-content ul li strong {
+    font-weight: bold;
+    color: black; 
+}
+
+
+
+p {
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-align: left;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.pro-call-records {
+    font-family: "Poppins-Light", Helvetica;
+    color: #000000;
+    font-size: 25.3px;
+    letter-spacing: 0;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.pro-content {
+    font-size: 18.3px;
+    letter-spacing: 0;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Poppins-Light", Helvetica;
+}
+
+.card-carousel-container {
+    overflow: hidden;
+    height: 450px;
+}
+
+.card-carousel {
+    display: flex;
+    animation: slide 20s linear infinite;
+    width: 100%;
+}
+
+.card-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 300px;
+    margin-right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.5s;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid beige;
+}
+
+.card .plan-card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 1;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.card:hover .card-bg {
+    opacity: 0.5;
+}
+
+.card:hover .plan-card-title {
+    opacity: 0;
+    font-size: large;
+}
+
+.card .plan-card-description {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+}
+
+.card:hover .plan-card-description {
+    opacity: 1;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-1 {
+    background-image: url('../file/voice.png');
+}
+
+.card-2 {
+    background-image: url('sms.png');
+}
+
+.card-3 {
+    background-image: url('../file/roaming.png');
+}
+
+.card-4 {
+    background-image: url('../file/billing.png');
+}
+
+.card-5 {
+    background-image: url('../file/location.png');
+}
+
+.card-6 {
+    background-image: url('../file/data.png');
+}
+
+.card-7 {
+    background-image: url('../file/voip.png');
+}
+
+.card-8 {
+    background-image: url('../file/event.png');
+}
+
+.card-9 {
+    background-image: url('../file/mms.png');
+}
+
+.card-10 {
+    background-image: url('../file/video.png');
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-360px);
+    }
+    20% {
+        transform: translateX(-720px);
+    }
+    30% {
+        transform: translateX(-1080px);
+    }
+    40% {
+        transform: translateX(-1440px);
+    }
+    50% {
+        transform: translateX(-1800px);
+    }
+    60% {
+        transform: translateX(-2160px);
+    }
+    70% {
+        transform: translateX(-2520px);
+    }
+    80% {
+        transform: translateX(-2880px);
+    }
+    90% {
+        transform: translateX(-3240px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} 
