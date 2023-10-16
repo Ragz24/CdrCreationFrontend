@@ -10,53 +10,6 @@ body {
   
   }
   
-  .navbar {
-    background-color: black;
-    /* Navbar background color */
-    color: white;
-    /* Text color */
-    padding: 10px 0;
-  
-    width: 108%;;
-    /* Add padding as needed */
-  }
-  
-  /* Center the navigation items horizontally */
-  .centered-nav {
-    list-style-type: none; /* Remove bullet points from the list */
-    padding: 0;
-    text-align: center;
-    font-size: 1.3rem;
-    /* Adjust font size as needed */
-    margin-top: 10px;
-  }
-  
-  /* Style the logo */
-  .logo {
-    width: 100px; /* Adjust the width as needed */
-    height: 50px; /* Maintain aspect ratio */
-    margin-right: 10px;
-    margin-left: 10px;; /* Add some spacing to the right of the logo */
-  }
-  
-  /* Style the navigation links */
-  .centered-nav li {
-    display: inline; /* Display list items horizontally */
-    margin: 0 15px; /* Add spacing between each item */
-  }
-  
-  .centered-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px; /* Make the text bold */
-  }
-  
-  .centered-nav a:hover {
-    color: #fff; /* Change text color on hover */
-    text-decoration: underline; /* Add underline on hover */
-  }
-  
   .btn {
     padding: 10px 20px;
     border: none;
@@ -67,8 +20,8 @@ body {
   .button-div 
   {
   display: flex;
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
+  justify-content: center; 
+  align-items: center; 
   }
   .btn.btn-login {
     background-color: black;
@@ -154,8 +107,8 @@ body {
 }
 
 .input-button-container {
-  display: flex; /* Use flex display for container */
-  align-items: center; /* Vertically center the items */
+  display: flex; 
+  align-items: center; 
   margin-bottom: 10px;
 }
 
@@ -164,7 +117,7 @@ body {
   width: 50%;
   border: 1px solid #333;
   border-radius: 5px;
-  margin: 10px 10px 10px 0; /* Add some spacing to the right of the input */
+  margin: 10px 10px 10px 0; 
   font-size: 16px;
 }
 
@@ -184,8 +137,7 @@ body {
 }
 
 
-/* Reduce the margin or padding of the div tag */
 .div-above-table {
-  margin: 0; /* You can adjust this value to reduce space */
-  padding: 0; /* You can adjust this value to reduce space */
+  margin: 0; 
+  padding: 0; 
 }

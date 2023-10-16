@@ -7,7 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #333; /* Default text color */
+    color: #333; 
 }
 
 .container {
@@ -22,11 +22,11 @@ body {
     height: 230px;
     overflow: hidden;
     border-radius: 50%;
-    border: 5px solid #333; /* Change border color */
+    border: 5px solid #333;
     display: block;
     margin: auto;
     margin-top: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
 .profile img {
@@ -36,10 +36,10 @@ body {
 }
 
 h1 {
-    font-size: 35px; /* Larger font size */
+    font-size: 35px; 
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #333; /* Text color */
+    color: #333; 
 }
 
 .quote {
@@ -109,7 +109,7 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Display the button in the center */
+    transform: translate(-50%, -50%); 
     color: white;
     background: transparent;
     padding: 10px 20px;
@@ -119,8 +119,8 @@ h1 {
     transform: translateX(100%);
     font-weight: bold;
 
-    opacity: 0; /* Initially make the button invisible */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition effect */
+    opacity: 0; 
+    transition: transform 0.3s ease, opacity 0.3s ease; 
 
    
 
@@ -131,8 +131,8 @@ h1 {
 }
 
 .card:hover .click-button {
-    transform: translate(-50%, -50%); /* Center the button within the card */
-    opacity: 1; /* Make the button visible */
+    transform: translate(-50%, -50%); 
+    opacity: 1; 
 }
 
 

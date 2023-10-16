@@ -20,8 +20,8 @@ overflow: auto;
 .button-div 
 {
 display: flex;
-justify-content: center; /* Horizontal centering */
-align-items: center; /* Vertical centering */
+justify-content: center; 
+align-items: center;
 }
 .btn.btn-login {
   background-color: black;
@@ -44,7 +44,7 @@ button{
   border-radius: 50% ;
   border-collapse: collapse;
   font-size: 11;
-  margin-bottom: 10px; /* Adjust this value to reduce the space */
+  margin-bottom: 10px; 
 
   box-shadow: rgba(140, 155, 165, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
@@ -95,9 +95,9 @@ button{
 
 
 table.styled-table th, table.styled-table td {
-  width: 10%; /* Adjust this value based on the number of columns */
-  padding: 8px; /* Adjust padding as needed for spacing */
-  text-align: center; /* Center-align content in each cell */
+  width: 10%; 
+  padding: 8px; 
+  text-align: center; 
 }
 
 .cdr-form {
@@ -112,8 +112,8 @@ table.styled-table th, table.styled-table td {
 }
 
 .input-button-container {
-  display: flex; /* Use flex display for container */
-  align-items: center; /* Vertically center the items */
+  display: flex; 
+  align-items: center; 
   margin-bottom: 10px;
 }
 
@@ -122,7 +122,7 @@ table.styled-table th, table.styled-table td {
   width: 50%;
   border: 1px solid #333;
   border-radius: 5px;
-  margin: 10px 10px 10px 0; /* Add some spacing to the right of the input */
+  margin: 10px 10px 10px 0; 
   font-size: 16px;
 }
 
@@ -142,8 +142,8 @@ table.styled-table th, table.styled-table td {
 }
 
 
-/* Reduce the margin or padding of the div tag */
+
 .div-above-table {
-  margin: 0; /* You can adjust this value to reduce space */
-  padding: 0; /* You can adjust this value to reduce space */
+  margin: 0; 
+  padding: 0; 
 }
