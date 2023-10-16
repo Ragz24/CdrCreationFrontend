@@ -29,8 +29,8 @@ h2{
 .button-div 
 {
   display: flex;
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
+  justify-content: center; 
+  align-items: center; 
 }
 .btn.btn-login {
     background-color: black;

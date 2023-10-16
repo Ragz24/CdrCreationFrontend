@@ -293,7 +293,7 @@ h2 {
 }
 
 .card-1 {
-    background-image: url('voice.png.png');
+    background-image: url('../file/voice.png');
 }
 
 .card-2 {
@@ -301,35 +301,35 @@ h2 {
 }
 
 .card-3 {
-    background-image: url('roaming.png.png');
+    background-image: url('../file/roaming.png');
 }
 
 .card-4 {
-    background-image: url('image.png');
+    background-image: url('../file/billing.png');
 }
 
 .card-5 {
-    background-image: url('location.png.png');
+    background-image: url('../file/location.png');
 }
 
 .card-6 {
-    background-image: url('data.png.png');
+    background-image: url('../file/data.png');
 }
 
 .card-7 {
-    background-image: url('voip.png');
+    background-image: url('../file/voip.png');
 }
 
 .card-8 {
-    background-image: url('event.png');
+    background-image: url('../file/event.png');
 }
 
 .card-9 {
-    background-image: url('mms.png');
+    background-image: url('../file/mms.png');
 }
 
 .card-10 {
-    background-image: url('video.png.png');
+    background-image: url('../file/video.png');
 }
 
 @keyframes slide {
