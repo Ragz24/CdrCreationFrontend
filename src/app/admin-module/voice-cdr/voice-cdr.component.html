@@ -10,7 +10,7 @@
     </form>
     
     <div  style="margin: 15px;" *ngIf="voiceArray.length > 0">
-        <table class=" table styled-table table-hover table-bordered ">
+        <table class=" table styled-table table-hover table-bordered "  datatable [dtOptions]="dtOptions">
             <thead class="table table-dark">
                 <tr>
                         <th>Call Start Time</th>

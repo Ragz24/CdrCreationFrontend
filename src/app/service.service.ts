@@ -15,7 +15,7 @@ export class ServiceService
 
   reteriveExistingUser(phoneNumber:string)
   {
-   
+    console.log('printing value');
     return this.httpClient.get(this.baseUrl+'/existingUser/'+phoneNumber);  
 
   } 

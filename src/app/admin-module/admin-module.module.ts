@@ -17,6 +17,7 @@ import { BillingCdrComponent } from './billing-cdr/billing-cdr.component';
 import { EventCdrComponent } from './event-cdr/event-cdr.component';
 import { VideoCdrComponent } from './video-cdr/video-cdr.component';
 import { VoipCdrComponent } from './voip-cdr/voip-cdr.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { VoipCdrComponent } from './voip-cdr/voip-cdr.component';
   ],
   imports: [
     CommonModule,
-    AdminModuleRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule
+    AdminModuleRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule,DataTablesModule
   ]
 })
 export class AdminModuleModule { }
