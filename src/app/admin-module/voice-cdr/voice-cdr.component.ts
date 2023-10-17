@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ServiceService } from 'src/app/service.service';
 import { Voice } from '../entity/Voice';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx'; // Import the entire XLSX library
+import { SessionStorageService } from 'src/app/session-storage.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class VoiceCDRComponent
 {
   voiceArray:Voice[]=[];
   quantity:any=''
-  constructor(private eService:ServiceService)
+  constructor(private eService:ServiceService,public session:SessionStorageService,private route:Router)
   { 
    
   }
@@ -95,6 +96,14 @@ export class VoiceCDRComponent
 
     }); 
     
+  } 
+
+  navigateHome()
+  {
+   console.log("hello")
+ 
+   this.route.navigate(["/home"]);
+ 
   }
 }
 

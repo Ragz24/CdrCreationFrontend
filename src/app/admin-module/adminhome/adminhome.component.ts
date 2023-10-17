@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceService } from 'src/app/service.service';
+import { SessionStorageService } from 'src/app/session-storage.service';
 
 @Component({
   selector: 'app-adminhome',
@@ -21,8 +24,8 @@ export class AdminhomeComponent
   ];
   randomQuote: string = '';
 
-  constructor() { 
-    // console.log(sessionStorage.getItem("emailAddress"))
+  constructor(public session:SessionStorageService,public route:Router) 
+  { 
   }
 
   ngOnInit(): void {
@@ -32,6 +35,14 @@ export class AdminhomeComponent
   displayRandomQuote() {
     const randomIndex = Math.floor(Math.random() * this.quotes.length);
     this.randomQuote = this.quotes[randomIndex];
-  }
+  } 
+
+  navigateHome()
+ {
+  console.log("hello")
+
+  this.route.navigate(["/home"]);
+
+ }
 
 }

@@ -3,6 +3,8 @@ import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import { VideoCdr } from '../entity/Video';
 import * as XLSX from 'xlsx'; // Import the entire XLSX library
+import { SessionStorageService } from 'src/app/session-storage.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +16,7 @@ export class VideoCdrComponent
 {
   videoArray:VideoCdr[]=[];
   quantity:any=''
-  constructor(private eService:ServiceService)
+  constructor(private eService:ServiceService,public session:SessionStorageService,private route:Router)
   { 
    
   }
@@ -102,6 +104,14 @@ export class VideoCdrComponent
 
     }); 
     
+  }
+
+  navigateHome()
+  {
+   console.log("hello")
+ 
+   this.route.navigate(["/home"]);
+ 
   }
 
 }

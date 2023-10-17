@@ -3,6 +3,8 @@ import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx'; // Import the entire XLSX library
 import {BillingCdr } from '../entity/Billing';
+import { SessionStorageService } from 'src/app/session-storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-billing-cdr',
@@ -13,7 +15,7 @@ export class BillingCdrComponent
 {
   billingArray:BillingCdr[]=[];
   quantity:any=''
-  constructor(private eService:ServiceService)
+  constructor(private eService:ServiceService,public session:SessionStorageService,public route:Router)
   { 
    
   }
@@ -93,5 +95,13 @@ export class BillingCdrComponent
       customClass:customClasses
 
     }); 
+   } 
+
+   navigateHome()
+   {
+    console.log("hello")
+  
+    this.route.navigate(["/home"]);
+  
    }
 }

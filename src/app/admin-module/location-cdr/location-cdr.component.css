@@ -1,6 +1,12 @@
-body {
+.main 
+{
   font-family: sans-serif;
 
+  background-image: url('https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg?size=626&ext=jpg&ga=GA1.2.1718361306.1695021266&semt=ais');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 #scrollableDiv
@@ -23,11 +29,7 @@ display: flex;
 justify-content: center; 
 align-items: center; 
 }
-.btn.btn-login {
-  background-color: black;
-  color: white;
-  margin-right: 10px;
-}
+
 h1,form{
   text-align: center;  
 }
@@ -91,8 +93,9 @@ button{
   background-color: black;
   color: white;
   margin-right: 10px;
-}
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
+}
 
 
 .cdr-form {
@@ -113,12 +116,21 @@ button{
 }
 
 .cdr-form input[type="number"] {
-  padding: 8px;
-  width: 50%;
-  border: 1px solid #333;
-  border-radius: 5px;
-  margin: 10px 10px 10px 0; 
-  font-size: 16px;
+
+
+
+    /* padding: 8px; */
+    width: 50%;
+    /* border: 1px solid #333; */
+    /* border-radius: 5px; */
+    /* margin: 10px 10px 10px 0;  */
+    font-size: 16px; 
+  
+    /**new change**/
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
 
 .cdr-form button {
@@ -141,4 +153,11 @@ button{
 .div-above-table {
   margin: 0; 
   padding: 0; 
+}
+
+
+.btn.btn-login:hover,
+.btn.btn-login:focus {
+  transform: scale(1.05); 
+  box-shadow: 0 0 10px; 
 }

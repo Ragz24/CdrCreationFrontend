@@ -3,6 +3,8 @@ import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx'; // Import the entire XLSX library
 import { VoIPCdr } from '../entity/VoIP';
+import { SessionStorageService } from 'src/app/session-storage.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-voip',
   templateUrl: './voip-cdr.component.html',
@@ -12,7 +14,7 @@ export class VoipCdrComponent
 {
   voipArray:VoIPCdr[]=[];
   quantity:any='';
-  constructor(private eService:ServiceService)
+  constructor(private eService:ServiceService,public session:SessionStorageService,private route:Router)
   { 
    
   }
@@ -91,6 +93,14 @@ export class VoipCdrComponent
 
     }); 
     
+  }
+
+  navigateHome()
+  {
+   console.log("hello")
+ 
+   this.route.navigate(["/home"]);
+ 
   }
 
 }

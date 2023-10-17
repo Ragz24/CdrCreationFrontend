@@ -1,4 +1,4 @@
-<body>
+<div class="main">
     <br>
     <h1>INTERNATIONAL ROAMING CALL DETAIL RECORD</h1>
     <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
@@ -61,4 +61,8 @@
         <div class="button-div"  *ngIf="roamingArray.length > 0">
         <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
         </div><br><br><br>
-</body>
+</div>
+
+<div *ngIf="!session.islogined()">
+    {{navigateHome()}}
+  </div>

@@ -1,4 +1,4 @@
-<body>
+<div class="main">
     <br>
     <h1>VOICE CALL DETAIL RECORD</h1><br>
     <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
@@ -43,4 +43,8 @@
         <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
         </div>
     </div> <br><br><br>
-    </body>
+</div>
+
+<div *ngIf="!session.islogined()">
+    {{navigateHome()}}
+</div>

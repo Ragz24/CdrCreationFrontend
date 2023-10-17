@@ -126,6 +126,8 @@
 
 .account-button a:hover {
   color: darkblue; 
+  cursor: pointer; 
+
 }
 
 
@@ -133,6 +135,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer; 
+
 
     color: blue; 
     text-decoration: underline; 

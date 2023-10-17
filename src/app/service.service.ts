@@ -90,54 +90,12 @@ export class ServiceService
 
   }
   
-
-  
    constructor(private httpClient:HttpClient) 
   { 
     this.validation = sessionStorage.getItem('validation') === 'true';
   }
 
-  setValidationState(validation: boolean)
-  {
-    this.validation = validation;
-    // Store the validation state in sessionStorage
-    sessionStorage.setItem('validation', validation.toString());
-  }
 
-  login(username: string, password: string)    //:Observable<any>
-  {
-    const body = { username, password }; 
-
-    if(username=='Admin@gmail.com' && password=='Admin123')
-    
-    { 
-      this.setValidationState(false); // Set validation to true
-      return 'admin';
-    } 
-
-    if(username=='raghaviboomi@gmail.com' && password=='Hello')
-    {
-      this.setValidationState(false); // Set validation to true
-      return 'user';
-    }
-
-    else
-    {
-      this.setValidationState(true); // Set validation to false
-      return false;
-    } 
-    //return this.httpClient.post(`${this.baseUrl}/login`, body);
-  }
-  
-
-
-  logout(): void {
-    this.setValidationState(true); // Set validation to false upon logout
-  }
-
-  isLoggedIn(): boolean {
-    return this.validation; // Check the validation status
-  }
   
   
 }

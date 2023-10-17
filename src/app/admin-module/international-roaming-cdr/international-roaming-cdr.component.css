@@ -1,7 +1,21 @@
-body {
+.main
+{
   font-family: sans-serif;
- 
+
+  background-image: url('https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg?size=626&ext=jpg&ga=GA1.2.1718361306.1695021266&semt=ais');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
+
+#scrollableDiv
+{
+width: 100%;
+overflow: auto;
+
+}
+
 .btn {
   padding: 10px 20px;
   border: none;
@@ -15,14 +29,9 @@ display: flex;
 justify-content: center; 
 align-items: center; 
 }
-.btn.btn-login {
-  background-color: black;
-  color: white;
-  margin-right: 10px;
-}
+
 h1,form{
-  text-align: center;
-  
+  text-align: center;  
 }
 label{
   font-size:20;
@@ -36,7 +45,7 @@ button{
   width: 100%;
   border-radius: 50% ;
   border-collapse: collapse;
-  font-size: 12.5;
+  font-size: 11;
   box-shadow: rgba(140, 155, 165, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
@@ -56,6 +65,10 @@ button{
 
 .b1 {
   box-shadow: rgba(136, 165, 191, 0.48) ;
+}
+
+.th {
+  font-weight: bold !important;
 }
 
 @media (max-width: 767px) {
@@ -80,12 +93,8 @@ button{
   background-color: black;
   color: white;
   margin-right: 10px;
-}
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
-table.styled-table th, table.styled-table td {
-  width: 10%; 
-  padding: 8px; 
-  text-align: center; 
 }
 
 
@@ -107,12 +116,21 @@ table.styled-table th, table.styled-table td {
 }
 
 .cdr-form input[type="number"] {
-  padding: 8px;
-  width: 50%;
-  border: 1px solid #333;
-  border-radius: 5px;
-  margin: 10px 10px 10px 0; 
-  font-size: 16px;
+
+
+
+    /* padding: 8px; */
+    width: 50%;
+    /* border: 1px solid #333; */
+    /* border-radius: 5px; */
+    /* margin: 10px 10px 10px 0;  */
+    font-size: 16px; 
+  
+    /**new change**/
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
 
 .cdr-form button {
@@ -137,9 +155,9 @@ table.styled-table th, table.styled-table td {
   padding: 0; 
 }
 
-#scrollableDiv
-{
-width: 100%;
-overflow: auto;
 
+.btn.btn-login:hover,
+.btn.btn-login:focus {
+  transform: scale(1.05); 
+  box-shadow: 0 0 10px; 
 }

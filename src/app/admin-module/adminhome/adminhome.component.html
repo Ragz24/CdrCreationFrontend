@@ -1,4 +1,4 @@
-<body>
+<div class="main" *ngIf="session.islogined()">
 <div class="container">
   <div class="profile">
       <img src="https://media.istockphoto.com/id/1324786380/photo/young-handsome-smiling-man-in-brown-shirt-and-glasses-feeling-confident-isolated-on-gray.webp?b=1&s=170667a&w=0&k=20&c=7yoJXyEpncSC4wXBuuDeRgelV1lfAEqWmzCuu3JfRqg=" alt="Profile Picture">
@@ -12,11 +12,11 @@
   <div class="card-container">
       <div class="card" >
               <h4 >VOICE CDR</h4>
-              <div class="content">
+              <!-- <div class="content">
                   <h3>CDR Description</h3>
                   <p>This is where you can provide a description of the CDR service. You can add more details here to explain what this service is all about.</p>
-              </div>
-              <!-- <button class="click-button" routerLink="/voice-cdr">Click Here</button> -->
+              </div> -->
+              <button class="click-button" routerLink="/voice-cdr">Click Here</button>
       </div>
 
       <div class="card">
@@ -42,7 +42,7 @@
 
 <div class="card">
       <h4>DATA CDR</h4>
-      <button class="click-button" routerLink="/voice-cdr">Click Here</button>
+      <button class="click-button" routerLink="/data-cdr">Click Here</button>
 </div>
 
 <div class="card">
@@ -69,5 +69,9 @@
 </div>
 
   </div>
-</div></div>
-</body>
+</div></div></div>
+
+<div *ngIf="!session.islogined()">
+      {{navigateHome()}}
+</div>
+

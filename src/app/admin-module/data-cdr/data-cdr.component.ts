@@ -3,6 +3,8 @@ import * as XLSX from 'xlsx'; // Import the entire XLSX library
 import { DataCdr } from '../entity/Data';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+import { SessionStorageService } from 'src/app/session-storage.service';
 
 
 @Component({
@@ -14,7 +16,7 @@ export class DataCdrComponent
 {
   dataArray:DataCdr[]=[];
   quantity:any=''
-  constructor(private eService:ServiceService)
+  constructor(private eService:ServiceService,public route:Router,public session:SessionStorageService)
   { 
    
   }
@@ -94,4 +96,12 @@ export class DataCdrComponent
     }); 
     
   }
+
+ navigateHome()
+ {
+  console.log("hello")
+
+  this.route.navigate(["/home"]);
+
+ }
 }

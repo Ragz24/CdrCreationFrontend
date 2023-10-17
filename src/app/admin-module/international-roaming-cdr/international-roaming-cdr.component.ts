@@ -3,6 +3,8 @@ import { RoamingCdr } from '../entity/Roaming';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx'; // Import the entire XLSX library
+import { SessionStorageService } from 'src/app/session-storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-international-roaming-cdr',
@@ -13,7 +15,7 @@ export class InternationalRoamingCdrComponent
 {
   roamingArray:RoamingCdr[]=[];
   quantity:any=''
-  constructor(private eService:ServiceService)
+  constructor(private eService:ServiceService,public session:SessionStorageService,private route:Router)
   { 
    
   }
@@ -93,4 +95,12 @@ export class InternationalRoamingCdrComponent
     }); 
     
   }
+
+  navigateHome()
+ {
+  console.log("hello")
+
+  this.route.navigate(["/home"]);
+
+ }
 }

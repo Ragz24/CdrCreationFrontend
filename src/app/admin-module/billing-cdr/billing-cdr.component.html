@@ -1,4 +1,4 @@
-<body>
+<div class="main">
     <br>
     <h1>BILLING CALL DETAIL RECORD</h1>
     <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
@@ -20,9 +20,9 @@
                     <th>Caller Number</th>
                     <th>Callee Number</th>
                     <th>Call Duration (Minutes)</th>
-                    <th>Rate</th>
-                    <th>Total Cost</th>
-                    <th>Tax and Surcharges</th>
+                    <th>Rate ($)</th>
+                    <th>Total Cost ($)</th>
+                    <th>Tax and Surcharges ($)</th>
                     <th>Billing Period</th>
                     <th>Payment Method</th>
                     <th>QoS Metrics</th>
@@ -52,4 +52,8 @@
         <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
     </div> <br><br><br> 
 
-</body>
+</div>
+
+<div *ngIf="!session.islogined()">
+    {{navigateHome()}}
+</div>

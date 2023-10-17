@@ -4,6 +4,8 @@ import { Mms } from '../entity/Mms';
 import { ServiceService } from 'src/app/service.service';
 import * as XLSX from 'xlsx'; // Import the entire XLSX library
 import { __makeTemplateObject } from 'tslib';
+import { SessionStorageService } from 'src/app/session-storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mms-cdr',
@@ -16,10 +18,10 @@ export class MmsCdrComponent
 
   mmsArray:Mms[]=[];
   quantity:any=''
-  constructor(private eService:ServiceService)
+  constructor(private eService:ServiceService,public session:SessionStorageService,private route:Router)
   { 
    
-  } 
+  }
   onDataSubmitted()
   { 
     if(this.quantity>0)
@@ -94,6 +96,14 @@ export class MmsCdrComponent
 
     }); 
     
+  }
+
+  navigateHome()
+  {
+   console.log("hello")
+ 
+   this.route.navigate(["/home"]);
+ 
   }
 
 }
