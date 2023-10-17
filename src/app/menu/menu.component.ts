@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { Router } from '@angular/router';
 import { SessionStorageService } from '../session-storage.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-menu',
@@ -11,9 +12,8 @@ import { SessionStorageService } from '../session-storage.service';
 export class MenuComponent 
 {
  
-  constructor(public session:SessionStorageService)
-  {
+  constructor(public session: SessionStorageService) {}
 
-  } 
+  
 
 }

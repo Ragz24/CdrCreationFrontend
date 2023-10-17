@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -80,10 +81,28 @@ export class SessionStorageService
 
   logout():any{
 
-    this.removeItem('username');
 
-    this.router.navigateByUrl("/home");
+    Swal.fire({
+      title: 'Are you sure you want to log out?',
+      text: 'You will be redirected to the home page.',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+      cancelButtonText: 'No',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.removeItem('username'); // Remove from session storage
+        Swal.fire({
+          title: 'Logged Out',
+          text: 'You have been logged out successfully!',
+          icon: 'success',
+        }).then(() => {
+          this.removeItem('username');
 
+          this.router.navigateByUrl('/home'); // Navigate to the home page
+        });
+      }
+    });
  
 
   }
