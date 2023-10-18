@@ -4,11 +4,13 @@
 
 <body>
   <div class="wrapper">
-    <span class="title">Phone Keyboard</span>
+    <br>
+    <h1>MAKE A CALL BELOW</h1>
     <div class="phone">
       <div class="phone-container">
         <div id="callStartedStatus" class="call-status">{{ callStatusMessage }}</div>
-        <div id="callEndStatus" class="call-status"></div>
+        <span class="call-duration-text" *ngIf="callHasStarted">{{ time }}</span>
+        <div id="callEndStatus" class="call-status"></div>        
         <input type="text" maxlength="10" class="number-input" id="numberInput" [value]="callerNumberValue"
           placeholder="Phone Number" readonly />
         <div class="keyboard">
@@ -42,11 +44,5 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Call duration timer -->
-  <div class="call-duration">
-    <span>Call Duration:</span>
-    <span>{{ time }}</span>
   </div>
 </body>

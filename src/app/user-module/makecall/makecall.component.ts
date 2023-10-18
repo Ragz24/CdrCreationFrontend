@@ -13,7 +13,7 @@ export class MakecallComponent implements OnInit, OnDestroy {
   showBackspaceButton: boolean = false;
   callerCalculation: FormGroup;
   callerNumberValue: string = '';
-  time: string = '00:00'; // Initialize timer to 00:00
+  time: string = '00:00'; 
   callHasStarted: boolean = false;
   intervalPeriod: any;
   startTime: Date | null = null;
@@ -26,11 +26,9 @@ export class MakecallComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    // Initialize other components or data when the component is created
   }
 
   ngOnDestroy() {
-    // Ensure the timer is stopped when the component is destroyed
     this.stopCallTimer();
   }
 
@@ -63,51 +61,60 @@ export class MakecallComponent implements OnInit, OnDestroy {
       } else {
         this.startCallTimer();
         this.callHasStarted = true;
-        this.callStarted = true; // Set callStarted to true when the call starts
+        this.callStarted = true;
         this.startTime = new Date();
         this.callStatusMessage = 'Call started ...';
         this.showKeyButtons = true;
         this.showBackspaceButton = true;
-
         // Display the "Call started" message
         const callStartedStatusElement = document.getElementById('callStartedStatus');
         if (callStartedStatusElement) {
           callStartedStatusElement.innerText = 'Call started';
-        }
 
-        const callerNumberControl = this.callerCalculation.get('callerNumber');
-        if (callerNumberControl) {
-          const callerNumber = callerNumberControl.value;
-          console.log('submitted number:', callerNumber);
+          Swal.fire({
+            title: 'Call Has Started',
+            icon: 'success',
+          });
         }
       }
     }
   }
-
   endCall() {
     this.stopCallTimer();
     this.callHasStarted = false;
-
+  
     if (this.startTime) {
       const endTime = new Date();
       const callDuration = this.calculateCallDuration(this.startTime, endTime);
-      console.log('call duration:', callDuration);
-    }
+  
+      // Display the call duration below "Call started"
+      this.callStatusMessage = `Call started - Duration: ${callDuration}`;
 
-    // Remove the "Call started" message
-    const callStartedStatusElement = document.getElementById('callStartedStatus');
-    if (callStartedStatusElement) {
-      callStartedStatusElement.innerText = '';
-    }
+      // Show SweetAlert message with call duration
+      const callStartedStatusElement = document.getElementById('callStartedStatus');
+      if (callStartedStatusElement) {
+        callStartedStatusElement.innerText = 'Call Ended';}
+      Swal.fire({
+        title: 'Call Ended',
+        text: `Call duration: ${callDuration}`,
+        icon: 'success',
+      }); 
 
-    // Display the "Call ended" message
-    const callEndStatusElement = document.getElementById('callEndStatus');
-    if (callEndStatusElement) {
-      callEndStatusElement.innerText = 'Call ended';
+      this.callerNumberValue=''
+  
+      // Reset the "Call started" message after a delay
+      setTimeout(() => {
+        this.callStatusMessage = '';
+      }, 3000); 
+    } else {
+      // Display the "Call ended" message
+      const callEndStatusElement = document.getElementById('callEndStatus');
+      if (callEndStatusElement) {
+        callEndStatusElement.innerText = 'Call ended';
+      }
     }
-
-    // Handle ending the call (e.g., hang up)
   }
+  
 
   private startCallTimer() {
     console.log('call has started!!');

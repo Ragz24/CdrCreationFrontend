@@ -43,9 +43,6 @@ export class VoiceCDRComponent implements OnInit {
       this.eService.displayVoice(this.quantity).subscribe(
         (data) => {
           this.voiceArray = data as Voice[];
-  
-          // Trigger DataTables to update
-          //this.dtTrigger.next(); // Provide a value or leave it empty
         },
         (error) => {
           console.error('Error:', error);

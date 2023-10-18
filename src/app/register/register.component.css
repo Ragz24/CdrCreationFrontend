@@ -14,9 +14,6 @@
   position: relative;
 }
 
-
-
-
 .sign-up .p {
   position: absolute;
   width: 258px;
@@ -52,8 +49,6 @@
   margin-top: 15px;
 }
 
-
-
 .sign-up .vector {
   position: absolute;
   width: 30px;
@@ -61,6 +56,7 @@
   top: 480px;
   left: 270px;
 }
+
 .register {
   position: absolute;
   width: 658px;
@@ -154,8 +150,6 @@
   letter-spacing: 0;
   line-height: normal;
 }
-
-
 
 .button-container {
   display: flex;
