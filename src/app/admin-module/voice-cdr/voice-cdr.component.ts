@@ -15,28 +15,30 @@ import { Subject } from 'rxjs';
 export class VoiceCDRComponent implements OnInit {
   voiceArray: Voice[] = [];
   quantity: any = '';
-  dtOptions: DataTables.Settings = {};
 
-  dtTrigger: Subject<any> = new Subject();
+  dtoptions: DataTables.Settings = {};
 
 
   constructor(
     private eService: ServiceService,
     public session: SessionStorageService,
     private route: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-    this.dtOptions = {
+    this.dtoptions = {
       pagingType: 'full_numbers',
       searching: true,
       lengthChange: false,
-      responsive: true, // Enable responsive tables
       language: {
-        searchPlaceholder: 'Search Here',
-      },
+        searchPlaceholder: 'Search Here'
+      }
     };
+
+    this.onDataSubmitted();
   }
+
+
 
   onDataSubmitted() {
     if (this.quantity > 0) {
@@ -49,15 +51,15 @@ export class VoiceCDRComponent implements OnInit {
         }
       );
     } else {
-      Swal.fire({
-        icon: 'error',
-        title: 'Invalid Request',
-        text: 'Please Enter a Quantity Greater Than 0.',
-      });
+      // Swal.fire({
+      //   icon: 'error',
+      //   title: 'Invalid Request',
+      //   text: 'Please Enter a Quantity Greater Than 0.',
+      // });
     }
   }
-  
-  
+
+
   downloadCdr() {
     const workbook = XLSX.utils.book_new();
 
@@ -75,7 +77,6 @@ export class VoiceCDRComponent implements OnInit {
     anchor.download = 'cdr_data.xlsx';
     anchor.click();
 
-    // Release the object URL
     window.URL.revokeObjectURL(blobURL);
 
     const customClasses = {

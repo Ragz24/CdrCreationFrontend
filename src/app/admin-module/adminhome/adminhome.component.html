@@ -1,77 +1,264 @@
-<div class="main" *ngIf="session.islogined()">
-<div class="container">
-  <div class="profile">
-      <img src="https://media.istockphoto.com/id/1324786380/photo/young-handsome-smiling-man-in-brown-shirt-and-glasses-feeling-confident-isolated-on-gray.webp?b=1&s=170667a&w=0&k=20&c=7yoJXyEpncSC4wXBuuDeRgelV1lfAEqWmzCuu3JfRqg=" alt="Profile Picture">
-  </div>
-  <div class="quote">
-    <h1>Welcome ADMIN!</h1>
-      <p id="quote-text">{{ randomQuote }}</p>
-  </div>
-  <div>
-  <h1>OUR CDR SERVICES</h1>
-  <div class="card-container">
-      <div class="card" >
-              <h4 >VOICE CDR</h4>
-              <!-- <div class="content">
-                  <h3>CDR Description</h3>
-                  <p>This is where you can provide a description of the CDR service. You can add more details here to explain what this service is all about.</p>
-              </div> -->
-              <button class="click-button" routerLink="/voice-cdr">Click Here</button>
-      </div>
+<div class="main">
+    <div class="container">
+        <div class="profile">
+            <img src="https://media.istockphoto.com/id/1324786380/photo/young-handsome-smiling-man-in-brown-shirt-and-glasses-feeling-confident-isolated-on-gray.webp?b=1&s=170667a&w=0&k=20&c=7yoJXyEpncSC4wXBuuDeRgelV1lfAEqWmzCuu3JfRqg="
+                alt="Profile Picture">
+        </div>
+        <div class="quote">
+            <h1>Welcome ADMIN!</h1>
+            <p id="quote-text">{{ randomQuote }}</p>
+        </div>
+        <h1>OUR CDR SERVICES</h1>
+        <div class="wrapper">
+            <!-- First row of 3 cards -->
+            <div class="row">
+                <div class="card">
+                    <input type="checkbox" id="card1" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image: url('voiceCdr.png');">
+                            <div class="inner">
+                                <h2>Voice CDR</h2>
+                                <label for="card1" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>Records details of voice calls, including call duration, phone numbers, and
+                                            timestamps.</p>
+                                    </div>
+                                    <label for="card1" routerLink="/voice-cdr" class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="card">
-            <h4>SMS CDR</h4> 
-            <button class="click-button" routerLink="/sms-cdr">Click Here</button>      
+                <div class="card">
+                    <input type="checkbox" id="card2" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image: url('smsCdr.png');">
+                            <div class="inner">
+                                <h2>SMS CDR</h2>
+                                <label for="card2" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>Tracks information about text messages, including sender and recipient
+                                            numbers, message content.</p>
+                                    </div>
+                                    <label for="card2" routerLink="/sms-cdr" class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <input type="checkbox" id="card3" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image: url('mmsCdr.png');">
+                            <div class="inner">
+                                <h2>MMS CDR</h2>
+                                <label for="card3" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>Captures multimedia messages, including sender and recipient numbers, message
+                                            content.</p>
+                                    </div>
+                                    <label for="card3" routerLink="/mms-cdr" class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second row of 3 cards -->
+            <div class="row">
+                <div class="card">
+                    <input type="checkbox" id="card7" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image:url('voipCdr.png')">
+                            <div class="inner">
+                                <h2>VoIP CDR</h2>
+                                <label for="card7" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>Captures call details for Voice over Internet Protocol (VoIP) services.</p>
+                                    </div>
+                                    <label for="card7" routerLink="/voip-cdr" class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <input type="checkbox" id="card8" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image: url('videoCdr.png');">
+                            <div class="inner">
+                                <h2>VIDEO CDR</h2>
+                                <label for="card8" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>Similar to voice call CDRs but specific to video calls, capturing call
+                                            details and video quality metrics</p>
+                                    </div>
+                                    <label for="card8" routerLink="/video-cdr" class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <input type="checkbox" id="card9" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image:url('billingCdr.png');">
+                            <div class="inner">
+                                <h2>BILLING CDR</h2>
+                                <label for="card9" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>Service that tracks communication and service usage for the purpose of
+                                            billing and accounting.</p>
+                                    </div>
+                                    <label for="card9" routerLink="/billing-cdr"
+                                        class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third row of 3 cards -->
+            <div class="row">
+                <div class="card">
+                    <input type="checkbox" id="card4" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image: url('dataCdr.png');">
+                            <div class="inner">
+                                <h2>Data CDR</h2>
+                                <label for="card4" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>It tracks data usage for internet connectivity, recording the data amount and
+                                            usage times.</p>
+                                    </div>
+                                    <label for="card4" routerLink="/data-cdr" class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <input type="checkbox" id="card5" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image: url('roamingCdr.png');">
+                            <div class="inner">
+                                <h2>Roaming CDR</h2>
+                                <label for="card5" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>Tracks usage details when a mobile device connects to a foreign network while
+                                            roaming.</p>
+                                    </div>
+                                    <label for="card5" routerLink="/roaming-cdr"
+                                        class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <input type="checkbox" id="card6" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front"
+                            style="background-image: url('https://img.freepik.com/free-photo/young-adult-businessman-typing-touch-screen-phone-generated-by-ai_188544-18600.jpg');">
+                            <div class="inner">
+                                <h2>Location CDR</h2>
+                                <label for="card6" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p> Records the location of mobile devices when connected to the network, used
+                                            for network optimization and location-based services</p>
+                                    </div>
+                                    <label for="card6" routerLink="/location-cdr"
+                                        class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Fourth row of 1 card -->
+            <div class="row">
+                <div class="card">
+                    <input type="checkbox" id="card10" class="more" aria-hidden="true">
+                    <div class="content">
+                        <div class="front" style="background-image: url('eventCdr.png');">
+                            <div class="inner">
+                                <h2>Event CDR</h2>
+                                <label for="card10" class="button details">Details</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <div class="button-container">
+                                    <div class="description">
+                                        <p>Data record that captures specific events or interactions such as calls,
+                                            messages or analysis, and billing purposes.</p>
+                                    </div>
+                                    <label for="card10" routerLink="/event-cdr" class="button view-details">View</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
 
-    <div class="card">
-          <h4>ROAMING CDR</h4>
-          <button class="click-button" routerLink="/roaming-cdr">Click Here</button>
+    <div *ngIf="!session.islogined()">
+        {{navigateHome()}}
     </div>
-
-    <div class="card">
-        <h4>BILLING CDR</h4>
-        <button class="click-button" routerLink="/billing-cdr">Click Here</button>
-    </div>
-
-    <div class="card">
-      <h4>LOCATION CDR</h4>
-      <button class="click-button" routerLink="/location-cdr">Click Here</button>
-
-</div>
-
-<div class="card">
-      <h4>DATA CDR</h4>
-      <button class="click-button" routerLink="/data-cdr">Click Here</button>
-</div>
-
-<div class="card">
- 
-      <h4>VoIP CDR</h4>
-      <button class="click-button" routerLink="/voip-cdr">Click Here</button>
-
-</div>
-
-
-<div class="card">
-      <h4>EVENT CDR</h4>
-      <button class="click-button" routerLink="/event-cdr">Click Here</button>
-</div>
-
-<div class="card">
-      <h4>MMS CDR</h4>
-      <button class="click-button" routerLink="/mms-cdr">Click Here</button>
-</div>
-
-<div class="card">
-      <h4>VIDEO CDR</h4>
-      <button class="click-button"routerLink="/video-cdr">Click Here</button>
-</div>
-
-  </div>
-</div></div></div>
-
-<div *ngIf="!session.islogined()">
-      {{navigateHome()}}
-</div>
-

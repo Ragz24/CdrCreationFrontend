@@ -2,13 +2,14 @@
     <br>
     <h1>EVENT CALL DETAIL RECORD</h1>
     <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
-    <label for="quantity">Select the number of CDRs to generate</label>
-    <div class="input-button-container">
-        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
-        <button type="submit" class="btn btn-login">GENERATE CDR</button>
-      </div>
+        <label for="quantity">Select the number of CDRs to generate</label>
+        <div class="input-button-container">
+            <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value"
+                required>
+            <button type="submit" class="btn btn-login">GENERATE CDR</button>
+        </div>
     </form>
-    <div style="margin: 15px;"  *ngIf="eventArray.length > 0"> 
+    <div style="margin: 15px;" *ngIf="eventArray.length > 0">
         <table class=" table styled-table table-hover table-bordered ">
             <thead class="table table-dark">
                 <tr>
@@ -34,7 +35,7 @@
                     <td>{{eventCDR.userInfo }}</td>
                 </tr>
             </tbody>
-        </table> <br>           
+        </table> <br>
         <div class="button-div">
             <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
         </div>
@@ -42,5 +43,5 @@
 </div>
 
 <div *ngIf="!session.islogined()">
-  {{navigateHome()}}
+    {{navigateHome()}}
 </div>

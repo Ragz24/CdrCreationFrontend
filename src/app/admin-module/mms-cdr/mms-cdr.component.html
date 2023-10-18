@@ -2,18 +2,18 @@
   <br>
   <h1>MMS CALL DETAIL RECORD</h1>
   <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
-  <label for="quantity">Select the number of CDRs to generate</label>
-  <div class="input-button-container">
+    <label for="quantity">Select the number of CDRs to generate</label>
+    <div class="input-button-container">
       <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
       <button type="submit" class="btn btn-login">GENERATE CDR</button>
     </div>
   </form>
 
 
-<div style="margin:3px;"  *ngIf="mmsArray.length > 0"> 
-  <table  class=" table styled-table table-hover table-bordered ">
-    <thead  class="table table-dark">
-      <tr>
+  <div style="margin:3px;" *ngIf="mmsArray.length > 0">
+    <table class=" table styled-table table-hover table-bordered ">
+      <thead class="table table-dark">
+        <tr>
           <th>Message ID</th>
           <th>Sender Phone Number</th>
           <th>Receiver Phone Number</th>
@@ -26,29 +26,29 @@
           <th>Sender Timestamp</th>
           <th>Receiver Timestamp</th>
           <th>Message Status</th>
-      </tr>
-  </thead>
-  <tbody class="table-group-divider">
-    <tr *ngFor="let cdr of mmsArray">
-      <td>{{ cdr.messageId }}</td>
-      <td>{{ cdr.senderPhoneNumber }}</td>
-      <td>{{ cdr.receiverPhoneNumber }}</td>
-      <td>{{ cdr.messageDirection }}</td>
-      <td>{{ cdr.messageType }}</td>
-      <td>{{ cdr.networkType }}</td>
-      <td>{{ cdr.contentType }}</td>
-      <td>{{ cdr.contentSize }}</td>
-      <td>{{ cdr.contentFormat }}</td>
-      <td>{{ cdr.senderTimestampStr }}</td>
-      <td>{{ cdr.receiverTimestampStr }}</td> 
-      <td>{{cdr.messageStatus}}</td>
-  </tr>
-  </tbody>
-  </table><br>
-<div class="button-div">
-<button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
-</div>
-</div> <br><br><br>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr *ngFor="let cdr of mmsArray">
+          <td>{{ cdr.messageId }}</td>
+          <td>{{ cdr.senderPhoneNumber }}</td>
+          <td>{{ cdr.receiverPhoneNumber }}</td>
+          <td>{{ cdr.messageDirection }}</td>
+          <td>{{ cdr.messageType }}</td>
+          <td>{{ cdr.networkType }}</td>
+          <td>{{ cdr.contentType }}</td>
+          <td>{{ cdr.contentSize }}</td>
+          <td>{{ cdr.contentFormat }}</td>
+          <td>{{ cdr.senderTimestampStr }}</td>
+          <td>{{ cdr.receiverTimestampStr }}</td>
+          <td>{{cdr.messageStatus}}</td>
+        </tr>
+      </tbody>
+    </table><br>
+    <div class="button-div">
+      <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
+    </div>
+  </div> <br><br><br>
 </div>
 
 <div *ngIf="!session.islogined()">

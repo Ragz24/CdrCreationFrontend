@@ -28,7 +28,7 @@
 }
 
 
-  
+
 .sign-up .text-wrapper-6 {
   position: absolute;
   width: 232px;
@@ -71,7 +71,7 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .form-group label {
@@ -97,7 +97,7 @@
 }
 
 .form-group {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .category-phone {
@@ -108,22 +108,22 @@
 
 .name-inputs {
   display: flex;
-  flex-direction: row; 
-  gap: 10px; 
+  flex-direction: row;
+  gap: 10px;
 }
 
 .email-password {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   gap: 10px;
-  margin-top: 15px; 
+  margin-top: 15px;
 }
 
 
 
 .account-button a:hover {
-  color: darkblue; 
-  cursor: pointer; 
+  color: darkblue;
+  cursor: pointer;
 
 }
 
@@ -132,14 +132,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  cursor: pointer; 
+  cursor: pointer;
 
 
-    color: blue; 
-    text-decoration: underline; 
-    transition: color 0.3s; 
+  color: blue;
+  text-decoration: underline;
+  transition: color 0.3s;
 
-  
+
 }
 
 .text-wrapper-11 {
@@ -165,17 +165,16 @@
 
 .btn.btn-sign-up {
   background-color: black;
-  color: white; 
+  color: white;
   margin-right: 10px;
 }
 
 .btn.btn-go-back {
-  background-color:#FFA500 !important;
+  background-color: #FFA500 !important;
   color: black;
 }
 
 .btn.btn-sign-up:disabled {
-  background-color: black !important; 
-  color: white !important; 
+  background-color: black !important;
+  color: white !important;
 }
-

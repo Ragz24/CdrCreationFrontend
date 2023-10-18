@@ -1,49 +1,49 @@
 <div class="main">
   <br>
-    <h1>SMS CALL DETAIL RECORD</h1>
-    <form (ngSubmit)="onDataSubmitted()" class="cdr-form"><br>
+  <h1>SMS CALL DETAIL RECORD</h1>
+  <form (ngSubmit)="onDataSubmitted()" class="cdr-form"><br>
     <label for="quantity">Select the number of CDRs to generate</label>
     <div class="input-button-container">
-        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
-        <button type="submit" class="btn btn-login">GENERATE CDR</button>
-      </div>
-    </form>
-  <div  style="margin: 15px;" *ngIf="smsArray.length > 0"> 
-      <table class=" table styled-table table-hover table-bordered ">
-              <thead class="table table-dark">
-              <tr>
-              <th>Timestamp</th>
-              <th>Delivery Timestamp</th>
-              <th>Sender Number</th>
-              <th>Receiver Number</th>
-              <th>Message Content</th>
-              <th>Message Length</th>
-              <th>Message Type</th>
-              <th>Message Status</th>
-              <th>Message Direction</th>
-              <th>Message ID</th>
-              <th>Connection Type</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr *ngFor="let sms of smsArray">
-              <td>{{sms.timeStamp }}</td>
-              <td>{{ sms.deliveryTimeStamp }}</td>
-              <td>{{ sms.senderNumber }}</td>
-              <td>{{ sms.receiverNumber }}</td>
-              <td>{{ sms.messageContent }}</td>
-              <td>{{ sms.messageLength }}</td>
-              <td>{{ sms.messageType }}</td>
-              <td>{{ sms.messageStatus }}</td>
-              <td>{{ sms.messageDirection }}</td>
-              <td>{{ sms.messageID }}</td>
-              <td>{{ sms.connectionType }}</td>
-              </tr>
-              </tbody>
-              </table><br>
-      <div class="button-div">
+      <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
+      <button type="submit" class="btn btn-login">GENERATE CDR</button>
+    </div>
+  </form>
+  <div style="margin: 15px;" *ngIf="smsArray.length > 0">
+    <table class=" table styled-table table-hover table-bordered ">
+      <thead class="table table-dark">
+        <tr>
+          <th>Timestamp</th>
+          <th>Delivery Timestamp</th>
+          <th>Sender Number</th>
+          <th>Receiver Number</th>
+          <th>Message Content</th>
+          <th>Message Length</th>
+          <th>Message Type</th>
+          <th>Message Status</th>
+          <th>Message Direction</th>
+          <th>Message ID</th>
+          <th>Connection Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sms of smsArray">
+          <td>{{sms.timeStamp }}</td>
+          <td>{{ sms.deliveryTimeStamp }}</td>
+          <td>{{ sms.senderNumber }}</td>
+          <td>{{ sms.receiverNumber }}</td>
+          <td>{{ sms.messageContent }}</td>
+          <td>{{ sms.messageLength }}</td>
+          <td>{{ sms.messageType }}</td>
+          <td>{{ sms.messageStatus }}</td>
+          <td>{{ sms.messageDirection }}</td>
+          <td>{{ sms.messageID }}</td>
+          <td>{{ sms.connectionType }}</td>
+        </tr>
+      </tbody>
+    </table><br>
+    <div class="button-div">
       <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
-      </div>
+    </div>
   </div> <br><br><br>
 </div>
 

@@ -2,39 +2,40 @@
     <br>
     <h1>INTERNATIONAL ROAMING CALL DETAIL RECORD</h1>
     <form (ngSubmit)="onDataSubmitted()" class="cdr-form">
-    <label for="quantity">Select the number of CDRs to generate</label>
-    <div class="input-button-container">
-        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
-        <button type="submit" class="btn btn-login">GENERATE CDR</button>
-      </div>
+        <label for="quantity">Select the number of CDRs to generate</label>
+        <div class="input-button-container">
+            <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value"
+                required>
+            <button type="submit" class="btn btn-login">GENERATE CDR</button>
+        </div>
     </form>
-    
+
     <div id="scrollableDiv" *ngIf="roamingArray.length > 0">
         <table class=" table styled-table table-hover table-bordered ">
             <thead class="table table-dark">
                 <tr>
-          <!-- <th>Cdr Type</th> -->
-          <th>Start Timestamp</th>          
-          <th>End Timestamp</th>
-          <th>Caller IMSI</th>
-          <th>Caller MSISDN</th>
-          <th>Caller Network</th>
-          <th>Caller Location</th>
-          <th>Caller Current Network</th>
-          <th>Callee Number</th>
-          <th>Callee Location</th>
-          <th>Callee Network</th>
-          <!-- <th>Call Type</th> -->
-          <th>Call Result</th>
-          <th>Call Termination Reason</th>
-          <th>Call Duration</th>
-          <th>Roaming Partner</th>
-          <th>Roaming Charges</th>
+                    <!-- <th>Cdr Type</th> -->
+                    <th>Start Timestamp</th>
+                    <th>End Timestamp</th>
+                    <th>Caller IMSI</th>
+                    <th>Caller MSISDN</th>
+                    <th>Caller Network</th>
+                    <th>Caller Location</th>
+                    <th>Caller Current Network</th>
+                    <th>Callee Number</th>
+                    <th>Callee Location</th>
+                    <th>Callee Network</th>
+                    <!-- <th>Call Type</th> -->
+                    <th>Call Result</th>
+                    <th>Call Termination Reason</th>
+                    <th>Call Duration</th>
+                    <th>Roaming Partner</th>
+                    <th>Roaming Charges</th>
                 </tr>
-    
+
             </thead>
-    
-            <tbody >
+
+            <tbody>
                 <tr *ngFor="let r of roamingArray">
                     <!-- <td>{{ r.cdrType }}</td> -->
                     <td>{{ r.startTimestamp }}</td>
@@ -56,13 +57,14 @@
                     <td>{{ r.roamingCharges }}</td>
                 </tr>
             </tbody>
-        </table>     </div>   
-        <br>
-        <div class="button-div"  *ngIf="roamingArray.length > 0">
+        </table>
+    </div>
+    <br>
+    <div class="button-div" *ngIf="roamingArray.length > 0">
         <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
-        </div><br><br><br>
+    </div><br><br><br>
 </div>
 
 <div *ngIf="!session.islogined()">
     {{navigateHome()}}
-  </div>
+</div>

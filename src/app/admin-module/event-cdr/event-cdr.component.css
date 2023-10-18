@@ -1,6 +1,4 @@
-
-.main
-{
+.main {
   font-family: sans-serif;
 
   background-image: url('https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg?size=626&ext=jpg&ga=GA1.2.1718361306.1695021266&semt=ais');
@@ -10,10 +8,9 @@
   min-height: 100vh;
 }
 
-#scrollableDiv
-{
-width: 100%;
-overflow: auto;
+#scrollableDiv {
+  width: 100%;
+  overflow: auto;
 
 }
 
@@ -24,27 +21,30 @@ overflow: auto;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.button-div 
-{
-display: flex;
-justify-content: center; 
-align-items: center; 
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1,form{
-  text-align: center;  
+h1,
+form {
+  text-align: center;
 }
-label{
-  font-size:20;
+
+label {
+  font-size: 20;
 }
-button{
-  color:white;
+
+button {
+  color: white;
   background-color: black;
-  
+
 }
+
 .styled-table {
   width: 100%;
-  border-radius: 50% ;
+  border-radius: 50%;
   border-collapse: collapse;
   font-size: 11;
   box-shadow: rgba(140, 155, 165, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
@@ -56,7 +56,7 @@ button{
 
 .styled-table {
   border-collapse: collapse;
-  
+
 }
 
 .container {
@@ -65,7 +65,7 @@ button{
 }
 
 .b1 {
-  box-shadow: rgba(136, 165, 191, 0.48) ;
+  box-shadow: rgba(136, 165, 191, 0.48);
 }
 
 .th {
@@ -74,12 +74,13 @@ button{
 
 @media (max-width: 767px) {
   .styled-table {
-      display: table;
+    display: table;
   }
+
   .styled-table th,
   .styled-table td {
-      display: table-cell;
-      width: auto;
+    display: table-cell;
+    width: auto;
   }
 }
 
@@ -111,27 +112,22 @@ button{
 }
 
 .input-button-container {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
 
 .cdr-form input[type="number"] {
 
+  width: 50%;
 
+  font-size: 16px;
 
-    /* padding: 8px; */
-    width: 50%;
-    /* border: 1px solid #333; */
-    /* border-radius: 5px; */
-    /* margin: 10px 10px 10px 0;  */
-    font-size: 16px; 
-  
-    /**new change**/
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
+  /**new change**/
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
 
 .cdr-form button {
@@ -152,13 +148,13 @@ button{
 
 
 .div-above-table {
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
 }
 
 
 .btn.btn-login:hover,
 .btn.btn-login:focus {
-  transform: scale(1.05); 
-  box-shadow: 0 0 10px; 
+  transform: scale(1.05);
+  box-shadow: 0 0 10px;
 }

@@ -1,4 +1,5 @@
 <!-- REGISTERATION HTML CODE-->
+
 <body>
   <div class="sign-up">
     <div class="div">
@@ -12,161 +13,128 @@
           <div class="name-inputs">
             <!-- First Name -->
             <div class="overlap-9">
-              <input
-                type="text"
-                class="rectangle"
-                id="firstName"
-                name="firstName"
-                formControlName="inputFirstName"
-                [class.is-invalid]="inputFirstName.invalid && inputFirstName.touched"
-                placeholder="First Name"
-                required
-              />
+              <input type="text" class="rectangle" id="firstName" name="firstName" formControlName="inputFirstName"
+                [class.is-invalid]="inputFirstName.invalid && inputFirstName.touched" placeholder="First Name"
+                required />
               <div *ngIf="inputFirstName.touched && inputFirstName.invalid" class="error-message">
-              <!-- Error messages for First Name -->
+                <!-- Error messages for First Name -->
                 <small style="color: red;" *ngIf="inputFirstName.errors?.['required']">Field can't be empty</small>
-                <small style="color: red;" *ngIf="inputFirstName.errors?.['pattern']">Field must be in the required pattern like 'Abc Xyz'<br></small>
-                <small style="color: red;" *ngIf="inputFirstName.errors?.['minlength']">Field must have a minimum of 3 characters</small>
+                <small style="color: red;" *ngIf="inputFirstName.errors?.['pattern']">Field must be in the required
+                  pattern like 'Abc Xyz'<br></small>
+                <small style="color: red;" *ngIf="inputFirstName.errors?.['minlength']">Field must have a minimum of 3
+                  characters</small>
               </div>
             </div>
-    
+
             <!-- Last Name -->
             <div class="overlap-6">
-              <input
-                type="text"
-                id="lastName"
-                class="rectangle"
-                name="lastName"
-                formControlName="inputLastName"
-                [class.is-invalid]="inputLastName.invalid && inputLastName.touched"
-                placeholder="Last Name"
-                required
-              />
-            <div *ngIf="inputLastName.touched && inputLastName.invalid" class="error-message">
-            <!-- Error messages for Last Name -->
-              <small style="color: red;" *ngIf="inputLastName.errors?.['required']">Field can't be empty</small>
-              <small style="color: red;" *ngIf="inputLastName.errors?.['pattern']">Field must be in the required pattern like 'Abc Xyz'<br></small>
-              <small style="color: red;" *ngIf="inputLastName.errors?.['minlength']">Field must have a minimum of 3 characters</small>
+              <input type="text" id="lastName" class="rectangle" name="lastName" formControlName="inputLastName"
+                [class.is-invalid]="inputLastName.invalid && inputLastName.touched" placeholder="Last Name" required />
+              <div *ngIf="inputLastName.touched && inputLastName.invalid" class="error-message">
+                <!-- Error messages for Last Name -->
+                <small style="color: red;" *ngIf="inputLastName.errors?.['required']">Field can't be empty</small>
+                <small style="color: red;" *ngIf="inputLastName.errors?.['pattern']">Field must be in the required
+                  pattern like 'Abc Xyz'<br></small>
+                <small style="color: red;" *ngIf="inputLastName.errors?.['minlength']">Field must have a minimum of 3
+                  characters</small>
+              </div>
             </div>
           </div>
         </div>
-    </div>
-    <div class="form-group">
-      <div class="category-phone">
-        <!-- Phone Number -->
-          <div class="overlap">
-                 <input
-                  type="text"
-                    id="phoneNumber"
-                    class="rectangle"
-                    name="phoneNumber"
-                    formControlName="inputPhoneNumber"
-                    [class.is-invalid]="inputPhoneNumber.invalid && inputPhoneNumber.touched"
-                    placeholder="Phone Number"
-                    required
-                  />
-                  <div *ngIf="inputPhoneNumber.touched && inputPhoneNumber.invalid" class="error-message">
-                    <!-- Error messages for Phone Number -->
-                    <small style="color: red;" *ngIf="inputPhoneNumber.errors?.['required']">Field can't be empty</small>
-                    <small style="color: red;" *ngIf="inputPhoneNumber.errors?.['pattern']">Field must contain only digits and should not start with 0<br></small>
-                    <small style="color: red;" *ngIf="inputPhoneNumber.errors?.['minlength']">Field must contain exactly 10 digits<br></small>
-                    <small style="color: red;" *ngIf="inputPhoneNumber.errors?.['maxlength']">Field must contain exactly 10 digits<br></small>
-                  </div>
-                </div>
-                <div class="overlap-group">
-                  <div class="input-wrapper">
-                    <select class="rectangle"
-                      [formControl]="inputPlanCategory"
-                      required
-                      [class.is-invalid]="inputPlanCategory.invalid && inputPlanCategory.touched && hasError"
-                      (blur)="validate(inputPlanCategory.value)"
-                      (change)="validate(inputPlanCategory.value)"
-                    >
-                      <option value="default">--Select Plan Category--</option>
-                      <option *ngFor="let category of planCategory" [value]="category">{{ category }}</option>
-                    </select>
-                  </div>
-                  <!-- Error message for not selecting category -->
-                  <div class="error-wrapper">
-                    <small style="color: red;" [class.d-none]="!hasError">Select Plan Category</small> 
-                  </div>
-                </div>
+        <div class="form-group">
+          <div class="category-phone">
+            <!-- Phone Number -->
+            <div class="overlap">
+              <input type="text" id="phoneNumber" class="rectangle" name="phoneNumber"
+                formControlName="inputPhoneNumber"
+                [class.is-invalid]="inputPhoneNumber.invalid && inputPhoneNumber.touched" placeholder="Phone Number"
+                required />
+              <div *ngIf="inputPhoneNumber.touched && inputPhoneNumber.invalid" class="error-message">
+                <!-- Error messages for Phone Number -->
+                <small style="color: red;" *ngIf="inputPhoneNumber.errors?.['required']">Field can't be empty</small>
+                <small style="color: red;" *ngIf="inputPhoneNumber.errors?.['pattern']">Field must contain only digits
+                  and should not start with 0<br></small>
+                <small style="color: red;" *ngIf="inputPhoneNumber.errors?.['minlength']">Field must contain exactly 10
+                  digits<br></small>
+                <small style="color: red;" *ngIf="inputPhoneNumber.errors?.['maxlength']">Field must contain exactly 10
+                  digits<br></small>
               </div>
             </div>
-    
-            <div class="form-group">
-              <input
-                type="text"
-                id="address"
-                class="rectangle-2"
-                name="address"
-                formControlName="inputAddress"
-                [class.is-invalid]="inputAddress.invalid && inputAddress.touched"
-                placeholder="Street Address, City, State, Postal Code"
-              />
-              <div *ngIf="inputAddress.touched && inputAddress.invalid" class="error-message">
-                <!-- Error messages for Street Address -->
-                <small style="color: red;" *ngIf="inputAddress.errors?.['required']">Field can't be empty</small>
-                <small style="color: red;" *ngIf="inputAddress.errors?.['minlength']">Field must have a minimum of 3 characters<br></small>
-              </div>
-            </div>
-    
-            <div class="form-group">
-              <!-- Email input -->
+            <div class="overlap-group">
               <div class="input-wrapper">
-                <input
-                  type="email"
-                  id="emailAddress"
-                  class="rectangle"
-                  name="emailAddress"
-                  formControlName="inputEmail"
-                  [class.is-invalid]="inputEmail.invalid && inputEmail.touched"
-                  placeholder="Email"
-                />
+                <select class="rectangle" [formControl]="inputPlanCategory" required
+                  [class.is-invalid]="inputPlanCategory.invalid && inputPlanCategory.touched && hasError"
+                  (blur)="validate(inputPlanCategory.value)" (change)="validate(inputPlanCategory.value)">
+                  <option value="default">--Select Plan Category--</option>
+                  <option *ngFor="let category of planCategory" [value]="category">{{ category }}</option>
+                </select>
               </div>
-              <!-- Email error messages -->
+              <!-- Error message for not selecting category -->
               <div class="error-wrapper">
-                <small class="text-danger" *ngIf="inputEmail.touched && inputEmail.invalid">
-                  <!-- Error messages for Email -->
-                  <span style="color: red;" *ngIf="inputEmail.errors?.['required']">Field can't be empty</span>
-                  <span style="color: red;" *ngIf="inputEmail.errors?.['pattern']">Invalid field format (Valid format: 'abc@example.com')</span>
-                </small>
-              </div>
-            </div> 
-            <div class="form-group">
-              <!-- Password input -->
-              <div class="input-wrapper">
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  class="rectangle"
-                  formControlName="inputPassword"
-                  [class.is-invalid]="inputPassword.invalid && inputPassword.touched"
-                  placeholder="Password"
-                />
-              </div>
-              <!-- Password error messages -->
-              <div class="error-wrapper">
-                <small class="text-danger" *ngIf="inputPassword.touched && inputPassword.invalid">
-                  <!-- Error messages for Password -->
-                  <span style="color: red;" *ngIf="inputPassword.errors?.['required']">Field can't be empty</span>
-                  <span style="color: red;" *ngIf="inputPassword.errors?.['pattern']">Field must contain at least one number and special character, one uppercase alphabet<br></span>
-                  <span style="color: red;" *ngIf="inputPassword.errors?.['minlength']">Field must contain a minimum of 10 characters<br></span>
-                  <span style="color: red;" *ngIf="inputPassword.errors?.['maxlength']">Field can contain a maximum of 20 characters</span>
-                </small>
+                <small style="color: red;" [class.d-none]="!hasError">Select Plan Category</small>
               </div>
             </div>
-          
-            <button type="submit" [disabled]="userForm.invalid || hasError" class="btn btn-sign-up">Sign Up</button>
-            <button type="submit" routerLink="/home" class="btn btn-go-back">Go Back</button>
-            
-          </form>   
-          <br>
-          <div class="account-button" routerLink="/login">I Already Have an Account</div>  
+          </div>
+        </div>
 
-          <!-- Register Image -->
-          <img class="register" src="registeration.jpg" >
-</div>
-      </div>
+        <div class="form-group">
+          <input type="text" id="address" class="rectangle-2" name="address" formControlName="inputAddress"
+            [class.is-invalid]="inputAddress.invalid && inputAddress.touched"
+            placeholder="Street Address, City, State, Postal Code" />
+          <div *ngIf="inputAddress.touched && inputAddress.invalid" class="error-message">
+            <!-- Error messages for Street Address -->
+            <small style="color: red;" *ngIf="inputAddress.errors?.['required']">Field can't be empty</small>
+            <small style="color: red;" *ngIf="inputAddress.errors?.['minlength']">Field must have a minimum of 3
+              characters<br></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <!-- Email input -->
+          <div class="input-wrapper">
+            <input type="email" id="emailAddress" class="rectangle" name="emailAddress" formControlName="inputEmail"
+              [class.is-invalid]="inputEmail.invalid && inputEmail.touched" placeholder="Email" />
+          </div>
+          <!-- Email error messages -->
+          <div class="error-wrapper">
+            <small class="text-danger" *ngIf="inputEmail.touched && inputEmail.invalid">
+              <!-- Error messages for Email -->
+              <span style="color: red;" *ngIf="inputEmail.errors?.['required']">Field can't be empty</span>
+              <span style="color: red;" *ngIf="inputEmail.errors?.['pattern']">Invalid field format (Valid format:
+                'abc@example.com')</span>
+            </small>
+          </div>
+        </div>
+        <div class="form-group">
+          <!-- Password input -->
+          <div class="input-wrapper">
+            <input type="password" id="password" name="password" class="rectangle" formControlName="inputPassword"
+              [class.is-invalid]="inputPassword.invalid && inputPassword.touched" placeholder="Password" />
+          </div>
+          <!-- Password error messages -->
+          <div class="error-wrapper">
+            <small class="text-danger" *ngIf="inputPassword.touched && inputPassword.invalid">
+              <!-- Error messages for Password -->
+              <span style="color: red;" *ngIf="inputPassword.errors?.['required']">Field can't be empty</span>
+              <span style="color: red;" *ngIf="inputPassword.errors?.['pattern']">Field must contain at least one number
+                and special character, one uppercase alphabet<br></span>
+              <span style="color: red;" *ngIf="inputPassword.errors?.['minlength']">Field must contain a minimum of 10
+                characters<br></span>
+              <span style="color: red;" *ngIf="inputPassword.errors?.['maxlength']">Field can contain a maximum of 20
+                characters</span>
+            </small>
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="userForm.invalid || hasError" class="btn btn-sign-up">Sign Up</button>
+        <button type="submit" routerLink="/home" class="btn btn-go-back">Go Back</button>
+
+      </form>
+      <br>
+      <div class="account-button" routerLink="/login">I Already Have an Account</div>
+
+      <!-- Register Image -->
+      <img class="register" src="registeration.jpg">
+    </div>
+  </div>
 </body>
