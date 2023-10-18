@@ -61,13 +61,14 @@
   top: 480px;
   left: 270px;
 }
-.registeration {
+.register {
   position: absolute;
   width: 658px;
   height: 600px;
   top: 0;
   left: 550px;
   object-fit: cover;
+  background-image: url('registeration.jpg');
 
 }
 

@@ -69,7 +69,6 @@ export class RegisterComponent
     ]);
     
     
-    //console.log('product_price '+this.product_price)
 
     this.userForm = new FormGroup({
       inputFirstName: this.inputFirstName,
@@ -94,6 +93,7 @@ export class RegisterComponent
   {
     // Check if the form is valid before proceeding
     if (this.userForm.valid) {
+
       // Access the form values and store them in the user object
       this.user.firstName = this.inputFirstName.value;
       this.user.lastName = this.inputLastName.value;
@@ -104,7 +104,7 @@ export class RegisterComponent
       this.user.planCategory = this.inputPlanCategory.value;
       
 
-      
+      //Check if there is an existing user
       this.eService.reteriveExistingUser(this.user.phoneNumber).subscribe((user) => {
         this.temp = user;
         console.log('Response from reteriveExistingUser:', user);
@@ -113,7 +113,6 @@ export class RegisterComponent
                   container: 'custom-swal-modal',
                   popup: 'custom-swal-modal',
                   header: 'custom-swal-upper-side',
-                  // Add other classes as needed
                 };
         let swal_title, swal_text;
         let swal_icon: 'error' | 'success' | 'warning' | 'info' | 'question' = 'error';
@@ -132,10 +131,10 @@ export class RegisterComponent
         } 
         else 
         {
-          // Call the createUser method here
+          // Call the createUser method here for registering the new customer.
           this.flag = this.eService.createUser(this.user).subscribe();
               swal_title = 'Success';
-              swal_text = 'Credentials Registered Successfully!';
+              swal_text = 'Credentials Registered Successfully! Login to Unlock Your Services!';
               swal_icon = 'success';
               Swal.fire({
                 title: swal_title,
@@ -144,7 +143,7 @@ export class RegisterComponent
                 customClass: customClasses,
                 confirmButtonText: 'OK'
               }).then(() => {
-                // Redirect to the home page or perform other actions
+                // Redirect to the home page s
                 this.router.navigate(['/home']);
                 this.userForm.reset();
               });

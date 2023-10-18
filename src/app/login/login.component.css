@@ -215,11 +215,12 @@
 
 .login .loginpic {
   position: absolute;
-  width: 658px;
+  width: 665px;
   height: 699px;
   top: 0;
   left: 550px;
   object-fit: cover;
+  background-image: url('loginpic.jpg');
 
 }
 
