@@ -1,8 +1,9 @@
+<!-- SMS CDR HTML -->
 <div class="main">
   <br>
   <h1>SMS CALL DETAIL RECORD</h1>
   <form (ngSubmit)="onDataSubmitted()" class="cdr-form"><br>
-    <label for="quantity">Select the number of CDRs to generate</label>
+    <label for="quantity">Enter the number of CDRs to generate</label>
     <div class="input-button-container">
       <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" placeholder="Enter Value" required>
       <button type="submit" class="btn btn-login">GENERATE CDR</button>
