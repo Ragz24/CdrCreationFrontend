@@ -64,3 +64,9 @@ button {
   cursor: pointer;
   margin: 0 10px;
 }
+
+.logo
+{ 
+  width: 70px;
+  background-image: url(logo.png);
+}

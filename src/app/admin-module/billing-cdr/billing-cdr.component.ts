@@ -29,6 +29,8 @@ export class BillingCdrComponent implements OnInit {
         searchPlaceholder: 'Search Here'
       }
     };
+
+    //this.onDataSubmitted();
   }
 
   onDataSubmitted() {

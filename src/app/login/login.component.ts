@@ -44,39 +44,36 @@ export class LoginComponent
 
        if(temp=='admin')
        {
-
-        swal_title = 'Success';
-        swal_text = 'Congratulations, your login as an admin has been successful!';
-      }
+        this.router.navigate(['/admin-home']);
+        swal_title = 'Welcome to Admin Home Page';
+        swal_icon='success';
+       }
       else if(temp=='user')
       {
-        swal_title = 'Success';
-        swal_text = 'Congratulations, your login as a user has been successful!';
-      } 
+        this.router.navigate(['/user-home']);
+        swal_title = 'Welcome User';
+        swal_icon='success';
 
+      } 
       else
       {
         swal_title = 'Login Unsuccessful';
-        swal_text = 'Invalid credentials, please try again'; // Display error message
-        swal_icon = 'error'; // Set the error icon 
-      } 
-         Swal.fire({
+        swal_text = 'Invalid credentials, please try again'; 
+        swal_icon = 'error'; 
+      }
+        Swal.fire({
           icon: swal_icon,
           title: swal_title,
           text: swal_text,
           confirmButtonText: 'Continue',
           customClass: customClasses,
-        }).then((result) => {
-          if (result.isConfirmed) {
-            if (temp === 'admin') {
-              this.router.navigate(['/admin-home']);
-            } else if (temp === 'user') {
-              this.router.navigate(['/user-home']);
-            }
-          }
         });
+       
+        
    }
 } 
+ 
+}
 
 
 
@@ -93,64 +90,4 @@ export class LoginComponent
 
 
 
-
-      // const role = this.eService.login(this.loginForm.value.username, this.loginForm.value.password);
-    
-      // let swal_title, swal_text;
-      // let swal_icon: 'error' | 'success' | 'warning' | 'info' | 'question' = 'success';
-    
-      // const customClasses = {
-      //     container: 'custom-swal-modal',
-      //     popup: 'custom-swal-modal',
-      //     header: 'custom-swal-upper-side',
-      //     // Add other classes as needed
-      //   };
-    
-      // if (role === 'admin') {
-      //     swal_title = 'Success';
-      //     swal_text = 'Congratulations, your login as an admin has been successful!';
-      //     // Handle admin-specific actions here
-      //   } else if (role === 'user') {
-      //     swal_title = 'Success';
-      //     swal_text = 'Congratulations, your login as a user has been successful!';
-      //     // Handle user-specific actions here
-      //   } else {
-      //     swal_title = 'Login Unsuccessful';
-      //     swal_text = 'Invalid credentials, please try again'; // Display error message
-      //     swal_icon = 'error'; // Set the error icon
-      //   }
-    
-      //   Swal.fire({
-      //     icon: swal_icon,
-      //     title: swal_title,
-      //     text: swal_text,
-      //     confirmButtonText: 'Continue',
-      //     customClass: customClasses,
-      //   }).then((result) => {
-      //     if (result.isConfirmed) {
-      //       if (role === 'admin') {
-      //         this.router.navigate(['/admin-home']);
-      //       } else if (role === 'user') {
-      //         this.router.navigate(['/user-home']);
-      //       }
-      //     }
-      //   });
-      
-    }
-    
-      
-       
-      // this.eService.login(this.loginForm.value.username, this.loginForm.value.password).subscribe(
-      //   (result) => {
-      //     console.log('Logged in successfully', result);
-      //     this.loginError = false;
-      //     this.router.navigate(['/user-home']);
-      //   },
-      //   (error) => {
-      //     // Handle login error
-      //     console.error('Login failed', error);
-      //     this.loginError = true;
-      //   }
-      // );
-    
-
+     
