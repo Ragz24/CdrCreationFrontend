@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import {MmsCdr } from '../entity/Mms';
 import { ServiceService } from 'src/app/service.service';
@@ -12,15 +12,28 @@ import { Router } from '@angular/router';
   templateUrl: './mms-cdr.component.html',
   styleUrls: ['./mms-cdr.component.css']
 })
-export class MmsCdrComponent {
+export class MmsCdrComponent implements OnInit{
 
 
   mmsArray: MmsCdr[] = [];
   quantity: any = ''
+  dtoptions: DataTables.Settings = {}; 
   constructor(private eService: ServiceService, public session: SessionStorageService, private route: Router) {
 
   }
+
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
+  }
   onDataSubmitted() {
+    this.mmsArray=[];
     if (this.quantity > 0) {
       this.eService.displayMms(this.quantity).subscribe(
         (data) => {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx';
@@ -12,16 +12,29 @@ import { SessionStorageService } from 'src/app/session-storage.service';
   templateUrl: './event-cdr.component.html',
   styleUrls: ['./event-cdr.component.css']
 })
-export class EventCdrComponent {
+export class EventCdrComponent implements OnInit {
 
   eventArray: EventCdr[] = [];
   quantity: any = ''
+  dtoptions: DataTables.Settings = {}; 
+
   constructor(private eService: ServiceService, public session: SessionStorageService, private route: Router) {
 
+  }
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
   }
 
 
   onDataSubmitted() {
+    this.eventArray=[];
     if (this.quantity > 0) {
       this.eService.displayEvent(this.quantity).subscribe(
         (data) => {

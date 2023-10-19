@@ -10,8 +10,9 @@
   </form>
 
 
-  <div style="margin:3px;" *ngIf="mmsArray.length > 0">
-    <table class=" table styled-table table-hover table-bordered ">
+  <div style="margin:3px;" >
+    <table class=" table styled-table table-hover table-bordered " datatable
+    [dtOptions]="dtoptions" *ngIf="mmsArray.length > 0">
       <thead class="table table-dark">
         <tr>
           <th>Message ID</th>
@@ -45,7 +46,7 @@
         </tr>
       </tbody>
     </table><br>
-    <div class="button-div">
+    <div class="button-div" *ngIf="mmsArray.length > 0">
       <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
     </div>
   </div> <br><br><br>

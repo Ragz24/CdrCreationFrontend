@@ -14,14 +14,27 @@ export class VoipCdrComponent
 {
   voipArray:VoIPCdr[]=[];
   quantity:any='';
+  dtoptions: DataTables.Settings = {}; 
+
   constructor(private eService:ServiceService,public session:SessionStorageService,private route:Router)
   { 
    
   }
   
-  
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
+  }
   onDataSubmitted()
-  { if(this.quantity>0)
+  { 
+    this.voipArray=[];
+    if(this.quantity>0)
     { 
       this.eService.displayVoIP(this.quantity).subscribe(
         (data) => 

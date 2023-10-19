@@ -9,8 +9,9 @@
     </div>
   </form>
 
-  <div style="margin: 15px;" *ngIf="dataArray.length > 0">
-    <table class=" table styled-table table-hover table-bordered ">
+  <div style="margin: 15px;">
+    <table class=" table styled-table table-hover table-bordered " datatable
+    [dtOptions]="dtoptions" *ngIf="dataArray.length > 0">
       <thead class="table table-dark">
         <tr>
           <th>Session Start Time</th>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as XLSX from 'xlsx';
 import { DataCdr } from '../entity/Data';
 import { ServiceService } from 'src/app/service.service';
@@ -12,15 +12,29 @@ import { SessionStorageService } from 'src/app/session-storage.service';
   templateUrl: './data-cdr.component.html',
   styleUrls: ['./data-cdr.component.css']
 })
-export class DataCdrComponent {
+export class DataCdrComponent implements OnInit {
   dataArray: DataCdr[] = [];
   quantity: any = ''
+
+  dtoptions: DataTables.Settings = {}; 
+
   constructor(private eService: ServiceService, public route: Router, public session: SessionStorageService) {
 
+  }
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
   }
 
 
   onDataSubmitted() {
+    this.dataArray=[];
     if (this.quantity > 0) {
       this.eService.displayData(this.quantity).subscribe(
         (data) => {

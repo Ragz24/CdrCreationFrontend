@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx'; // Import the entire XLSX library
@@ -11,16 +11,28 @@ import { Router } from '@angular/router';
   templateUrl: './sms-cdr.component.html',
   styleUrls: ['./sms-cdr.component.css']
 })
-export class SmsCdrComponent {
+export class SmsCdrComponent implements OnInit {
 
   smsArray: SmsCdr[] = [];
   quantity: any = ''
+  dtoptions: DataTables.Settings = {}; 
+
   constructor(private eService: ServiceService, public session: SessionStorageService, private route: Router) {
 
   }
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
+  }
 
-
-  onDataSubmitted() {
+  onDataSubmitted() { 
+    this.smsArray=[];
     if (this.quantity > 0) {
       this.eService.displaySms(this.quantity).subscribe(
         (data) => {

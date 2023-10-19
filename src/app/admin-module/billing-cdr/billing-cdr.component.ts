@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx';
@@ -11,15 +11,28 @@ import { Router } from '@angular/router';
   templateUrl: './billing-cdr.component.html',
   styleUrls: ['./billing-cdr.component.css']
 })
-export class BillingCdrComponent {
+export class BillingCdrComponent implements OnInit {
   billingArray: BillingCdr[] = [];
   quantity: any = ''
+
+  dtoptions: DataTables.Settings = {}; 
+
   constructor(private eService: ServiceService, public session: SessionStorageService, public route: Router) {
 
   }
-
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
+  }
 
   onDataSubmitted() {
+    this.billingArray=[];
     if (this.quantity > 0) {
       this.eService.displayBilling(this.quantity).subscribe(
         (data) => {

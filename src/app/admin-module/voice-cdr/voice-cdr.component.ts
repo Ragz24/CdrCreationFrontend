@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx';
 import { SessionStorageService } from 'src/app/session-storage.service';
 import { Router } from '@angular/router';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-voice-cdr',
@@ -35,12 +34,12 @@ export class VoiceCDRComponent implements OnInit {
       }
     };
 
-    this.onDataSubmitted();
   }
 
 
 
   onDataSubmitted() {
+    this.voiceArray=[];
     if (this.quantity > 0) {
       this.eService.displayVoice(this.quantity).subscribe(
         (data) => {
@@ -51,11 +50,11 @@ export class VoiceCDRComponent implements OnInit {
         }
       );
     } else {
-      // Swal.fire({
-      //   icon: 'error',
-      //   title: 'Invalid Request',
-      //   text: 'Please Enter a Quantity Greater Than 0.',
-      // });
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Request',
+        text: 'Please Enter a Quantity Greater Than 0.',
+      });
     }
   }
 

@@ -10,8 +10,9 @@
         </div>
     </form>
 
-    <div id="scrollableDiv" *ngIf="billingArray.length > 0">
-        <table class=" table styled-table table-hover table-bordered ">
+    <div id="scrollableDiv" >
+        <table class=" table styled-table table-hover table-bordered " datatable
+        [dtOptions]="dtoptions" *ngIf="billingArray.length > 0">
             <thead class="table table-dark">
                 <tr>
                     <th>Subscriber ID</th>

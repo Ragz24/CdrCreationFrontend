@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import { VideoCdr } from '../entity/Video';
@@ -12,15 +12,27 @@ import { Router } from '@angular/router';
   templateUrl: './video-cdr.component.html',
   styleUrls: ['./video-cdr.component.css']
 })
-export class VideoCdrComponent {
+export class VideoCdrComponent implements OnInit{
   videoArray: VideoCdr[] = [];
   quantity: any = ''
+  dtoptions: DataTables.Settings = {}; 
   constructor(private eService: ServiceService, public session: SessionStorageService, private route: Router) {
 
   }
+  
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
+  }
 
-
-  onDataSubmitted() {
+  onDataSubmitted() { 
+    this.videoArray=[];
     const customClasses = {
       container: 'custom-swal-modal',
       popup: 'custom-swal-modal',

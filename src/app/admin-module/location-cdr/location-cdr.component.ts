@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx';
@@ -10,15 +10,29 @@ import { Router } from '@angular/router';
   templateUrl: './location-cdr.component.html',
   styleUrls: ['./location-cdr.component.css']
 })
-export class LocationCdrComponent {
+export class LocationCdrComponent implements OnInit{
   locationArray: LocationCdr[] = [];
   quantity: any = ''
+  dtoptions: DataTables.Settings = {}; 
+
   constructor(private eService: ServiceService, public session: SessionStorageService, private route: Router) {
 
   }
 
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
+  }
+
 
   onDataSubmitted() {
+    this.locationArray=[];
     if (this.quantity > 0) {
       this.eService.displayLocation(this.quantity).subscribe(
         (data) => {

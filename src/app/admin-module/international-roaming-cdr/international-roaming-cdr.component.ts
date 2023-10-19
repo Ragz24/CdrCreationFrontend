@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RoamingCdr } from '../entity/Roaming';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
@@ -11,15 +11,27 @@ import { Router } from '@angular/router';
   templateUrl: './international-roaming-cdr.component.html',
   styleUrls: ['./international-roaming-cdr.component.css']
 })
-export class InternationalRoamingCdrComponent {
+export class InternationalRoamingCdrComponent implements OnInit{
   roamingArray: RoamingCdr[] = [];
   quantity: any = ''
+  dtoptions: DataTables.Settings = {}; 
+
   constructor(private eService: ServiceService, public session: SessionStorageService, private route: Router) {
 
   }
-
+  ngOnInit(): void {
+    this.dtoptions = {
+      pagingType: 'full_numbers',
+      searching: true,
+      lengthChange: false,
+      language: {
+        searchPlaceholder: 'Search Here'
+      }
+    };
+  }
 
   onDataSubmitted() {
+    this.roamingArray=[];
     if (this.quantity > 0) {
       this.eService.displayRoaming(this.quantity).subscribe(
         (data) => {

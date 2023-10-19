@@ -10,8 +10,9 @@
         </div>
     </form>
 
-    <div id="scrollableDiv" *ngIf="videoArray.length > 0"> <!-- Second Table --><br><br>
-        <table class=" table styled-table table-hover table-bordered ">
+    <div id="scrollableDiv" > 
+        <table datatable
+        [dtOptions]="dtoptions" class=" table styled-table table-hover table-bordered " *ngIf="videoArray.length > 0">
             <thead class="table table-dark">
                 <tr>
                     <th>Call Start Timestamp</th>
