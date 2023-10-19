@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
-import { Voice } from '../entity/Voice';
+import { VoiceCdr } from '../entity/Voice';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx';
 import { SessionStorageService } from 'src/app/session-storage.service';
@@ -13,7 +13,7 @@ import { Subject } from 'rxjs';
   styleUrls: ['./voice-cdr.component.css'],
 })
 export class VoiceCDRComponent implements OnInit {
-  voiceArray: Voice[] = [];
+  voiceArray: VoiceCdr[] = [];
   quantity: any = '';
 
   dtoptions: DataTables.Settings = {};
@@ -44,7 +44,7 @@ export class VoiceCDRComponent implements OnInit {
     if (this.quantity > 0) {
       this.eService.displayVoice(this.quantity).subscribe(
         (data) => {
-          this.voiceArray = data as Voice[];
+          this.voiceArray = data as VoiceCdr[];
         },
         (error) => {
           console.error('Error:', error);

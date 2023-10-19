@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
-import { Mms } from '../entity/Mms';
+import {MmsCdr } from '../entity/Mms';
 import { ServiceService } from 'src/app/service.service';
 import * as XLSX from 'xlsx';
 import { __makeTemplateObject } from 'tslib';
@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class MmsCdrComponent {
 
 
-  mmsArray: Mms[] = [];
+  mmsArray: MmsCdr[] = [];
   quantity: any = ''
   constructor(private eService: ServiceService, public session: SessionStorageService, private route: Router) {
 
@@ -24,7 +24,7 @@ export class MmsCdrComponent {
     if (this.quantity > 0) {
       this.eService.displayMms(this.quantity).subscribe(
         (data) => {
-          this.mmsArray = data as Mms[];
+          this.mmsArray = data as MmsCdr[];
 
         },
         (error) => {

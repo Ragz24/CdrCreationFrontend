@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
 import Swal from 'sweetalert2';
 import * as XLSX from 'xlsx'; // Import the entire XLSX library
-import { Sms } from '../entity/Sms';
+import { SmsCdr } from '../entity/Sms';
 import { SessionStorageService } from 'src/app/session-storage.service';
 import { Router } from '@angular/router';
 
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class SmsCdrComponent {
 
-  smsArray: Sms[] = [];
+  smsArray: SmsCdr[] = [];
   quantity: any = ''
   constructor(private eService: ServiceService, public session: SessionStorageService, private route: Router) {
 
@@ -24,7 +24,7 @@ export class SmsCdrComponent {
     if (this.quantity > 0) {
       this.eService.displaySms(this.quantity).subscribe(
         (data) => {
-          this.smsArray = data as Sms[];
+          this.smsArray = data as SmsCdr[];
 
         },
         (error) => {

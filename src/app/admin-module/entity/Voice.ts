@@ -1,4 +1,4 @@
-export class Voice
+export class VoiceCdr
 {
 constructor(
 public callStartTime:string,

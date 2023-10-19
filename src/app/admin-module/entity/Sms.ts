@@ -1,4 +1,4 @@
-export class Sms
+export class SmsCdr
 {
 constructor(
 public timeStamp:string,

@@ -285,7 +285,7 @@ h1 {
   /* Center horizontally within the .button-container */
   transform: translateX(-50%);
   /* Center horizontally */
-  width: 150px;
+  width: 200px;
   /* Set the desired width */
   height: 40px;
   /* Set the desired height */

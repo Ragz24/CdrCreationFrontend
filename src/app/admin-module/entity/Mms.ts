@@ -1,4 +1,4 @@
-export class Mms
+export class MmsCdr
 {
     constructor(
     public messageId:string,
