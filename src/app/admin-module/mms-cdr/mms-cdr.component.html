@@ -11,7 +11,7 @@
   </form>
 
 
-  <div style="margin:3px;" >
+  <div id="scrollableDiv">
     <table class=" table styled-table table-hover table-bordered " datatable
     [dtOptions]="dtoptions" *ngIf="mmsArray.length > 0">
       <thead class="table table-dark">
@@ -46,11 +46,11 @@
           <td>{{cdr.messageStatus}}</td>
         </tr>
       </tbody>
-    </table><br>
+    </table></div><br>
     <div class="button-div" *ngIf="mmsArray.length > 0">
       <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
     </div>
-  </div> <br><br><br>
+   <br><br><br>
 </div>
 
 <div *ngIf="!session.islogined()">

@@ -14,7 +14,8 @@ const routes: Routes = [
 
 {path:'view-user',component:ViewuserdetailsComponent},
 
- {path:'',component:HomeComponent}
+ {path:'',component:HomeComponent},
+
 
 ];
 

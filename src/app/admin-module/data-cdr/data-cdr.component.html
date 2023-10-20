@@ -41,7 +41,7 @@
 
       </tbody>
     </table><br>
-    <div class="button-div">
+    <div class="button-div" *ngIf="dataArray.length > 0">
       <button type="submit" (click)="downloadCdr()" class="btn btn-login">DOWNLOAD AS CSV FILE</button> 
     </div>
   </div> <br><br><br>

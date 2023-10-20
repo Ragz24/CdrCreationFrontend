@@ -157,3 +157,10 @@ button {
   transform: scale(1.05);
   box-shadow: 0 0 10px;
 }
+
+#scrollableDiv
+{
+width: 100%;
+overflow: auto;
+
+}

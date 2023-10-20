@@ -9,12 +9,12 @@
       <button type="submit" class="btn btn-login">GENERATE CDR</button>
     </div>
   </form>
-  <div style="margin: 15px;" >
+  <div id="scrollableDiv">
     <table class=" table styled-table table-hover table-bordered " datatable
     [dtOptions]="dtoptions" *ngIf="smsArray.length > 0">
       <thead class="table table-dark">
         <tr>
-          <th>Timestamp</th>
+          <th>Start Timestamp</th>
           <th>Delivery Timestamp</th>
           <th>Sender Number</th>
           <th>Receiver Number</th>
